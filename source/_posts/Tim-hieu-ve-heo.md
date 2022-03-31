@@ -18,4 +18,4 @@ Tự động hóa bằng github flows
 
 - [ ] Viết tài liệu các trang tìm hiểu kia
 - [ ] Thư thay theme hexo mặc định thành theme khác cho đẹp
-- [ ] Tìm hiểu về *.md gắn linh, gắn hình, tìm hiểu về github flows khi mà submit thì tự động kiểm thử, check style code, gửi email, deploy, ... Cái này thì tôi cũng k biết nhiều, hắn viết cái này dạy tôi cũng được
+- [ ] Tìm hiểu về *.md gắn linh, gắn hình, tìm hiểu về github flows khi mà submit thì tự động kiểm thử, check style code, gửi email, deploy.
