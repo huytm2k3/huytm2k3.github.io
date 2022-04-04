@@ -124,3 +124,118 @@ Tạo tắt:
 Hoặc ấn Alt + Shift + S, sau đó bấm R.
 Khi đó, Class Manager sẽ lấy biến name theo:
 ![](/images/JavaPost/a43.png)
+## Interface: Là một kiểu trừu tượng tham chiếu trong java, nó tương tự như class nhưng có những điểm đặc biệt.
+![](/images/JavaPost/a45.png)
+### Interface attributes
+![](/images/JavaPost/a46.png)
+### Interface methods
+![](/images/JavaPost/a47.png)
+### Interface labs
+Tạo Interface: Chuột phải vào Package/New/Interface:
+![](/images/JavaPost/a48.png)
+![](/images/JavaPost/a49.png)
+![](/images/JavaPost/a50.png)
+![](/images/JavaPost/a51.png)
+## Abstract Class
+![](/images/JavaPost/a52.png)
+![](/images/JavaPost/a53.png)
+![](/images/JavaPost/a54.png)
+![](/images/JavaPost/a55.png)
+## Inheritance
+Cách để sử dụng lại tài nguyên của class
+![](/images/JavaPost/a56.png)
+## Inheritance Labs
+Một Class thừa kế 1 Class, 1 class thừa kế 1 interface:
+![](/images/JavaPost/a57.png)
+- 1 Class chỉ có thể thừa kế 1 class
+- 1 class có thể thừa kế đa interface:
+![](/images/JavaPost/a58.png)
+![](/images/JavaPost/a59.png)
+Nếu class Developer thừa kế của class Employee:
+![](/images/JavaPost/a60.png)
+Thì class Manager có thể dùng như này:
+![](/images/JavaPost/a61.png)
+## Abstraction
+![](/images/JavaPost/a62.png)
+## Abstraciton Labs
+![](/images/JavaPost/a63.png)
+![](/images/JavaPost/a64.png)
+2 class Student và Employee cùng dùng hàm move() của Person nhưng theo 2 cách khác nhau.
+## Encapsulation (Tăng tính che giấu bảo mật của object)
+## Encapsulation Labs
+Ở những mục trước, chúng ta đã khai báo biến name ở Employee với private
+![](/images/JavaPost/a65.png)
+Nên chỉ có thể dùng getters and setters.
+## Polymorphism (Đa hình)
+Một name – nhiều form.
+![](/images/JavaPost/a66.png)
+## Java OOP Recap
+![](/images/JavaPost/a67.png)
+- Về mặt cơ bản thì đều có đặc điểm là che giấu
+- Với Abstraction: Che giấu chi tiết cách để tạo ra phương thức.
+- Encapsulation: Che giấu về mặt dữ liệu.
+![](/images/JavaPost/a68.png)
+## Java Identifiers
+## Java Keywords
+![](/images/JavaPost/a69.png)
+## Java Naming Convention
+![](/images/JavaPost/a70.png)
+## Java Naming Convention Labs
+- Upper case: MYPACKAGE
+- Lower case: mypackage
+- Camel case: MyPackage ( Lạc đà )
+- Mixed case – Lower camel case: myPackage
+![](/images/JavaPost/a71.png)
+![](/images/JavaPost/a72.png)
+## Global Variable Labs
+## Local Variable Labs
+![](/images/JavaPost/a73.png)
+## Primitive Data Types (Dữ liệu nguyên thủy):
+![](/images/JavaPost/a74.png)
+## Primitive Data Types Labs
+![](/images/JavaPost/a75.png)
+## Autoboxing vs Unboxing
+## Variable Initialization
+## Variable Initialization Labs
+![](/images/JavaPost/a76.png)
+Final variable phải được đặt giá trị, final variable không được thay đổi giá trị.
+![](/images/JavaPost/a77.png)
+## Garbage Collection (GC)
+Loại bỏ những unreferenced object khỏi bộ nhớ.
+![](/images/JavaPost/a78.png)
+![](/images/JavaPost/a79.png)
+![](/images/JavaPost/a80.png)
+## Garbage Collection Labs
+![](/images/JavaPost/a81.png)
+![](/images/JavaPost/a82.png)
+![](/images/JavaPost/a83.png)
+## Variable Scope (Phạm vi của biến):
+## Java Heap and Stack:
+- Các biến và Object được lưu trữ ở đâu liên quan đến Java Heap and Stack?
+- Bộ nhớ của Heap để lưu trữ những Object.
+- Java Stack lưu trữ những phương thức, Local variables và reference variables.
+## Arithmetic Operatiors (Toán tử số học)
+![](/images/JavaPost/a84.png)
+## Assignment Operators
+![](/images/JavaPost/a85.png)
+## Relational Operators
+![](/images/JavaPost/a86.png)
+## Instanceof
+Kiểm tra các Object để xem nó có phải 1 đối tượng, 1 đại diện hay 1 class cụ thể không.
+## Instanceof Labs
+![](/images/JavaPost/a87.png)
+## Logical Operators
+![](/images/JavaPost/a88.png)
+![](/images/JavaPost/a89.png)
+## Logical Operators Labs
+![](/images/JavaPost/a90.png)
+## Declare Arrays
+![](/images/JavaPost/a91.png)
+## Multi-dimension Array
+![](/images/JavaPost/a92.png)
+## Access Array Elements
+![](/images/JavaPost/a93.png)
+## Array Labs
+![](/images/JavaPost/a94.png)
+## Array Initialization
+![](/images/JavaPost/a95.png)
