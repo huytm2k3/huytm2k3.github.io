@@ -219,7 +219,7 @@ void sortTang(list *l){
 ```
 ### Hàm sắp xếp giảm theo điểm TB
 ```C
-void sortTang(list *l){
+void sortGiam(list *l){
     sv tmp;
     if(l->head!=NULL){
         for(node *i=l->head; i!= NULL; i=i->next){
@@ -259,7 +259,7 @@ int main(){
             for(int i=1;i<=n;i++){
                 printf("Nhap SV thu %d: \n",i);
                 nhap(&s);
-                last_insert(&l, getNode(s));
+                tailInsert(&l, getNode(s));
             }
             break;
         case 2:
