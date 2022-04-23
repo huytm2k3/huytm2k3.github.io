@@ -30,3 +30,5 @@ Tôi dành khoảng 3 cho tới 4 tiếng trong 1 ngày để vừa học vừa 
 ![](/images/diaryPost/Screenshot_1.png)
 Vì vướng lịch học trên trường nên tôi cố gắng hoàn thành nhất có thể (Đương nhiên có những hôm chỉ dc đến 4 tiếng vì vướng những môn học vào buổi sáng).
 
+### Bài viết này vẫn đang được hoàn thiện. Thanks for all <3.
+
