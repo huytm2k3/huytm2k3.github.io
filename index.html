@@ -71,6 +71,141 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Con-tro-trong-C-C-Pointer" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/04/23/Con-tro-trong-C-C-Pointer/" class="article-date">
+  <time class="dt-published" datetime="2022-04-23T16:18:57.000Z" itemprop="datePublished">2022-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/04/23/Con-tro-trong-C-C-Pointer/">Con trỏ trong C/C++(Pointer)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Mo-dau"><a href="#Mo-dau" class="headerlink" title="Mở đầu"></a>Mở đầu</h2><p>Bài viết này dựa trên 5 tiếng tìm hiểu về con trỏ (Pointer) của mình. Sẽ cố gắng chia sẻ những thứ cơ bản mà mình biết về nó, hi vọng phần nào đó sẽ giúp đỡ các bạn trong quá trình học.</p>
+<p>Mọi thắc mắc xin liên hệ tới:</p>
+<ul>
+<li>Facebook: <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100072417355186">https://www.facebook.com/profile.php?id=100072417355186</a> (Tạ Minh Huy)</li>
+<li>Zalo: 0522566897</li>
+<li>Email: <a href="mailto:&#72;&#x75;&#121;&#x61;&#x74;&#x31;&#56;&#x30;&#x35;&#50;&#50;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#72;&#x75;&#121;&#x61;&#x74;&#x31;&#56;&#x30;&#x35;&#50;&#50;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
+</ul>
+<h2 id="Khai-niem"><a href="#Khai-niem" class="headerlink" title="Khái niệm"></a>Khái niệm</h2><p>Từ trước tới nay, con trỏ là thứ mà đa số các sinh viên IT năm nhất đau đầu. Vậy con trỏ (pointer) là gì?</p>
+<p>Con trỏ thực tế cũng chỉ là một biến, có thể khai báo, khởi tạo và lưu trữ giá trị và có địa chỉ riêng của nó. Nhưng con trỏ không lưu trữ giá trị bình thường mà là lưu trữ địa chỉ.<br>Phần ví dụ tôi sẽ dùng ngôn ngữ C.</p>
+<h2 id="Noi-dung"><a href="#Noi-dung" class="headerlink" title="Nội dung"></a>Nội dung</h2><p>Cấu trúc khai báo 1 biến con trỏ: </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Kieu du lieu&gt; *&lt;Ten bien&gt;;</span><br></pre></td></tr></table></figure>
+<p>Example: </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p; <span class="comment">// Trỏ tới địa chỉ biến kiểu nguyên</span></span><br><span class="line"><span class="type">float</span> *p; <span class="comment">// Trỏ tới địa chỉ biến kiểu thực</span></span><br><span class="line"><span class="type">char</span> *p; <span class="comment">// Trỏ tới địa chỉ biến kiểu kí tự</span></span><br><span class="line"><span class="type">void</span> *p; <span class="comment">// Có thể trỏ tới bất kì địa chỉ của kiểu dữ liệu nào</span></span><br></pre></td></tr></table></figure>
+
+<p>Vậy thì tác dụng của con trỏ là gì? Hãy xem thử con trỏ có quyền năng gì nhé.</p>
+<p>Example:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> *p = &amp;a; <span class="comment">// Trỏ tới địa chỉ của biến a</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,p); <span class="comment">// Output : Địa chỉ của biến a (Tương đương với in ra &amp;a)</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,&amp;p); <span class="comment">// Output: Địa chỉ của biến p (Biến con trỏ)</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,*p); <span class="comment">// Output: Giá trị của biến a (5)</span></span><br><span class="line"><span class="comment">// Vì con trỏ p trỏ tới địa chỉ của a, tức là p có thể làm thay đổi được giá trị của a</span></span><br><span class="line">*p = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a); <span class="comment">// Output: 10 (Giá trị biến a đã được thay đổi)</span></span><br></pre></td></tr></table></figure>
+
+<p>Một tác dụng mà mình thấy khá hữu ích trong môn lập trình căn bản là dùng con trỏ trong hàm con (Tham chiếu).<br>Tham chiếu, tham trị là gì? Chúng khác nhau chỗ nào?</p>
+<p>Ví dụ bằng một hàm quốc dân mà ai ai cũng dùng đi nhé.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Tham trị</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp;</span><br><span class="line">    tmp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">5</span>,b = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Gia tri a va b truoc khi swap: a = %d, b = %d\n&quot;</span>);</span><br><span class="line">    swap(a,b);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Gia tri a va b sau khi swap: a = %d, b = %d\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Output</span></span><br><span class="line"><span class="comment">// Gia tri a va b truoc khi swap: a = 5, b = 10</span></span><br><span class="line"><span class="comment">// Gia tri a va b sau khi swap: a = 5, b = 10</span></span><br></pre></td></tr></table></figure>
+<p>Biến a và b ở đây là biến cục bộ (Local Variable), hãy coi mỗi 1 hàm là một căn nhà, biến cục bộ chính là đồ vật trong nhà. Đồ nhà ai chỉ dùng được ở nhà đấy, khi truyền vào một tham trị sẽ được coi như là nhà “main” cho nhà “swap” mượn đồ. Nhưng chỉ là mượn để dùng mà không được thay đổi, phá hoại. Đây gọi là tham trị hay chính là nhà “swap” chỉ có thể sử dụng cái giá trị của a, b mà nhà “main” cho mượn mà không thể thay đổi giá trị của nó.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Tham chiếu</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span> *a,<span class="type">int</span> *b)</span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp;</span><br><span class="line">    tmp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">5</span>,b = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Gia tri a va b truoc khi swap: a = %d, b = %d\n&quot;</span>);</span><br><span class="line">    swap(&amp;a,&amp;b);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Gia tri a va b sau khi swap: a = %d, b = %d\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Output</span></span><br><span class="line"><span class="comment">// Gia tri a va b truoc khi swap: a = 5, b = 10</span></span><br><span class="line"><span class="comment">// Gia tri a va b sau khi swap: a = 10, b = 5</span></span><br></pre></td></tr></table></figure>
+<p>Khi truyền vào tham chiếu, tức là nhà “main” cho phép nhà “swap” có thể thay đổi giá trị của biến.</p>
+<p>Đó là cách nói dễ hiểu, thực chất là:</p>
+<ul>
+<li>Khi tham trị, hàm main chỉ truyền vào hàm swap là “giá trị” của a và b, nên dù có thay đổi cũng không ảnh hưởng đến giá trị của biến a, b ở hàm main.</li>
+<li>Khi tham chiếu, hàm main truyền vào chính là “địa chỉ” của biến a và b nên hàm swap có thể trực tiếp sửa đổi giá trị biến a, b ở hàm main.</li>
+</ul>
+<p>Vì vậy, không phải ngẫu nhiên mà hàm scanf phải luôn truyền vào địa chỉ của một biến.<br>Bài viết này đang trong quá trình hoàn thiện thêm nội dung, Thank you for all &lt;3 !</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/04/23/Con-tro-trong-C-C-Pointer/" data-id="cl2bojd4w0000bxokblakgo4m" data-title="Con trỏ trong C/C++(Pointer)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pointer/" rel="tag">pointer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Window-Subsystem-Linux-WSL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/04/23/Window-Subsystem-Linux-WSL/" class="article-date">
+  <time class="dt-published" datetime="2022-04-23T15:59:35.000Z" itemprop="datePublished">2022-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/04/23/Window-Subsystem-Linux-WSL/">Window Subsystem Linux (WSL)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Gioi-thieu"><a href="#Gioi-thieu" class="headerlink" title="Giới thiệu"></a>Giới thiệu</h2><p>Source:<br><a target="_blank" rel="noopener" href="https://xuanthulab.net/gioi-thieu-va-cai-dat-wsl-tren-windows.html">https://xuanthulab.net/gioi-thieu-va-cai-dat-wsl-tren-windows.html</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual">https://docs.microsoft.com/en-us/windows/wsl/install-manual</a></p>
+<p>Mọi thắc mắc xin liên hệ tới:</p>
+<ul>
+<li>Facebook: <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100072417355186">https://www.facebook.com/profile.php?id=100072417355186</a> (Tạ Minh Huy)</li>
+<li>Zalo: 0522566897</li>
+<li>Email: <a href="mailto:&#72;&#117;&#121;&#x61;&#x74;&#x31;&#56;&#x30;&#x35;&#x32;&#50;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#72;&#117;&#121;&#x61;&#x74;&#x31;&#56;&#x30;&#x35;&#x32;&#50;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
+</ul>
+<p>WSL (Windows Subsystem for Linux) là một tính năng có trên Windows x64 (từ Windows 10, bản 1607 và trên Windows Server 2019), nó cho phép chạy hệ điều hành Linux (GNU&#x2F;Linux) trên Windows. Với WSL bạn có thể chạy các lệnh, các ứng dụng trực tiếp từ dòng lệnh Windows mà không phải bận tâm về việc tạo &#x2F; quản lý máy ảo như trước đây.</p>
+<p>Dễ hiểu thì là chạy Terminal của Linux trên Windows. Bài viết này được mình sưu tầm và viết lại một cách ngắn gọn, dễ hiểu nhất.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Điều kiện:</p>
+<ul>
+<li>Máy đã bật chế độ ảo hóa của CPU (CPU Virtualization)</li>
+<li>Windows 10 (64 bit, version 1607) trở đi hoặc Windows Server 2019</li>
+</ul>
+<p>Cách kiểm tra phiên bản Windows:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="type">System.Environment</span>]::OSVersion.Version</span><br></pre></td></tr></table></figure>
+
+<h3 id="Cai-dat"><a href="#Cai-dat" class="headerlink" title="Cài đặt"></a>Cài đặt</h3><p>Mở PowerShell(PS) với quyền Administrator</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Enable-WindowsOptionalFeature</span> <span class="literal">-Online</span> <span class="literal">-FeatureName</span> Microsoft<span class="literal">-Windows-Subsystem-Linux</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /<span class="built_in">enable-feature</span> /featurename:Microsoft<span class="literal">-Windows-Subsystem-Linux</span> /all</span><br></pre></td></tr></table></figure>
+<p>Sau khi nó kích hoạt, nhấn Y trả lời câu hỏi như hình trên để khởi động lại máy. Khởi động lại máy, vào dòng lệnh gõ lệnh kiểm tra danh dách các distro (bản linux) đã được cài đặt:<br><img src="/images/WslPost/Screenshot_1.png"></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">-l</span> <span class="literal">--all</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/WslPost/Screenshot_2.png"></p>
+<p>Tải app “Ubuntu” trên MS Stores và mở.<br><img src="/images/WslPost/Screenshot_3.png"></p>
+<p>Thiết lập username và password cho Linux:<br><img src="/images/WslPost/Screenshot_4.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/04/23/Window-Subsystem-Linux-WSL/" data-id="cl2bojd5b000bbxok70kl5ziz" data-title="Window Subsystem Linux (WSL)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/" rel="tag">windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Linked-list" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/04/21/Linked-list/" class="article-date">
@@ -96,8 +231,8 @@
         <h2 id="Mo-dau"><a href="#Mo-dau" class="headerlink" title="Mở đầu"></a>Mở đầu</h2><p>Bài viết này dựa trên 15 tiếng học Linked list của mình, sẽ chia sẻ tất cả những thứ cơ bản mà mình biết về nó.<br>Mọi thắc mắc xin liên hệ tới:</p>
 <ul>
 <li>Facebook: <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100072417355186">https://www.facebook.com/profile.php?id=100072417355186</a> (Tạ Minh Huy)</li>
-<li>Zalo: 0562093951</li>
-<li>Email: <a href="mailto:&#x48;&#117;&#x79;&#97;&#x74;&#49;&#x38;&#48;&#53;&#50;&#x32;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#x48;&#117;&#x79;&#97;&#x74;&#49;&#x38;&#48;&#53;&#50;&#x32;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></li>
+<li>Zalo: 0522566897</li>
+<li>Email: <a href="mailto:&#72;&#x75;&#x79;&#97;&#x74;&#49;&#x38;&#x30;&#53;&#50;&#x32;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#72;&#x75;&#x79;&#97;&#x74;&#49;&#x38;&#x30;&#53;&#50;&#x32;&#64;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></li>
 </ul>
 <h3 id="Khai-niem"><a href="#Khai-niem" class="headerlink" title="Khái niệm"></a>Khái niệm</h3><p>Linked list hay còn gọi là danh sách liên kết, là một dãy các cấu trúc dữ liệu được kết nối với nhau thông qua các liên kết (link). Hiểu một cách đơn giản thì Danh sách liên kết là một cấu trúc dữ liệu bao gồm một nhóm các nút (node) tạo thành một chuỗi. Mỗi nút gồm dữ liệu ở nút đó và tham chiếu đến nút kế tiếp trong chuỗi.<br>Danh sách liên kết là cấu trúc dữ liệu được sử dụng phổ biến thứ hai sau mảng.</p>
 <h3 id="Cac-loai-danh-sach-lien-ket"><a href="#Cac-loai-danh-sach-lien-ket" class="headerlink" title="Các loại danh sách liên kết"></a>Các loại danh sách liên kết</h3><ul>
@@ -140,11 +275,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/21/Linked-list/" data-id="cl29t3r7400029vp4gad22ak6" data-title="Danh sách liên kết (Linked List)" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/04/21/Linked-list/" data-id="cl2bojd560004bxok5051ec02" data-title="Danh sách liên kết (Linked List)" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linked-list/" rel="tag">linked-list</a></li></ul>
 
     </footer>
   </div>
@@ -189,10 +324,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/21/Deploy-with-ubuntu/" data-id="cl29t3r7200019vp441elg0cq" data-title="Deploy with Ubuntu (ssh)" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/04/21/Deploy-with-ubuntu/" data-id="cl2bojd550003bxok6lt42zlz" data-title="Deploy with Ubuntu (ssh)" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
+
     </footer>
   </div>
   
@@ -240,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/21/Convert-GIS-file-with-Gdal/" data-id="cl29t3r6x00009vp4gglz3xxa" data-title="Convert GIS file with Gdal" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/04/21/Convert-GIS-file-with-Gdal/" data-id="cl2bojd510001bxok82q52ois" data-title="Convert GIS file with Gdal" class="article-share-link">Share</a>
       
       
       
@@ -343,10 +480,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-Java/" data-id="cl29t3r7400039vp437wa4cgo" data-title="Tìm hiểu về Java OOP (Hướng đối tượng)" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-Java/" data-id="cl2bojd570005bxok2v4hai1f" data-title="Tìm hiểu về Java OOP (Hướng đối tượng)" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaOOP/" rel="tag">javaOOP</a></li></ul>
+
     </footer>
   </div>
   
@@ -389,10 +528,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-heo/" data-id="cl29t3r7b00089vp45i64glti" data-title="Tìm hiểu về hexo" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-heo/" data-id="cl2bojd5a000abxok6percspp" data-title="Tìm hiểu về hexo" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
     </footer>
   </div>
   
@@ -460,10 +601,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-android/" data-id="cl29t3r7700059vp40dcl2nj4" data-title="Tìm hiểu về android" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-android/" data-id="cl2bojd580007bxokbzjk4tmo" data-title="Tìm hiểu về android" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
+
     </footer>
   </div>
   
@@ -503,10 +646,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-bien-moi-truong-trong-windows/" data-id="cl29t3r7800069vp4gb8jguvj" data-title="Tim hieu ve bien moi truong trong windows" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/03/30/Tim-hieu-ve-bien-moi-truong-trong-windows/" data-id="cl2bojd590008bxokg9f4g53s" data-title="Tim hieu ve bien moi truong trong windows" class="article-share-link">Share</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/" rel="tag">windows</a></li></ul>
+
     </footer>
   </div>
   
@@ -528,7 +673,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaOOP/" rel="tag">javaOOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked-list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pointer/" rel="tag">pointer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/" rel="tag">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li></ul>
     </div>
   </div>
 
@@ -538,7 +683,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a>
+      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/C-C/" style="font-size: 20px;">C/C++</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/javaOOP/" style="font-size: 10px;">javaOOP</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked-list</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pointer/" style="font-size: 10px;">pointer</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 20px;">windows</a> <a href="/tags/wsl/" style="font-size: 10px;">wsl</a>
     </div>
   </div>
 
@@ -560,6 +705,14 @@
       <ul>
         
           <li>
+            <a href="/2022/04/23/Con-tro-trong-C-C-Pointer/">Con trỏ trong C/C++(Pointer)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/23/Window-Subsystem-Linux-WSL/">Window Subsystem Linux (WSL)</a>
+          </li>
+        
+          <li>
             <a href="/2022/04/21/Linked-list/">Danh sách liên kết (Linked List)</a>
           </li>
         
@@ -569,14 +722,6 @@
         
           <li>
             <a href="/2022/04/21/Convert-GIS-file-with-Gdal/">Convert GIS file with Gdal</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/30/Tim-hieu-ve-Java/">Tìm hiểu về Java OOP (Hướng đối tượng)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/30/Tim-hieu-ve-heo/">Tìm hiểu về hexo</a>
           </li>
         
       </ul>
