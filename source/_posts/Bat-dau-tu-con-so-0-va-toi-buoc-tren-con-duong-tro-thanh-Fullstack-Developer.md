@@ -4,7 +4,7 @@ date: 2022-04-23 19:00:02
 tags: [diary, fullstack-developer]
 ---
 ## Mở đầu
-Như ở tiêu đề của Blogsite này, tôi là Tạ Minh Huy. Tôi viết cái post này bắt đầu từ ngày 23/4/2022 và sẽ tiếp tục cho tới khi đạt được mục tiêu là trở thành 1 Fullstack Developer.
+Như ở tiêu đề của Blogsite này, tôi là Tạ Minh Huy, sinh viên năm nhất của KMA. Tôi viết cái post này bắt đầu từ ngày 23/4/2022 và sẽ tiếp tục cho tới khi đạt được mục tiêu là trở thành 1 Fullstack Developer (Hiện tại vẫn chưa).
 Mọi thắc mắc xin liên hệ tới:
 - Facebook: https://www.facebook.com/profile.php?id=100072417355186 (Tạ Minh Huy)
 - Zalo: 0522566897
@@ -26,7 +26,7 @@ Ngày 13/12/2021, tôi được tiếp xúc với Cơ sở dữ liệu (Database
 Tháng 2/2022, tôi lên Hà Nội để chuẩn bị cho việc học offline (Vì trước đó dịch Covid nên trường cho học online). Lúc đó tôi góp 2 triệu của tôi nhận được từ project NVCK và xin thêm của bố mẹ, tôi mua thêm 1 cái màn hình để phục vụ cho việc học.
 Vào khoảng tháng 3/2022, anh tôi hướng cho tôi tới việc xin thực tập tại công ty GFD (Công ty làm về bản đồ) khi hè tới. Từ đấy thì sự cố gắng của tôi được đẩy cao lên. Dự án Tlmap được khởi tạo.
 Tôi dành khoảng 3 cho tới 4 tiếng trong 1 ngày để vừa học vừa làm (Làm cho anh tôi), được tiếp xúc với Leaflet, mapbox, phần mềm Qgis, PostGis,... thực sự quá khó khăn đối với một đứa mới học lập trình như tôi.
-Ngày 21/3/2022, tôi học gần hết 24 video lập trìn Android căn bản, và vướng mắc tại phần Custom ListView, sau đó tôi phải dành đâu đó 7-8 ngày học hết 100 video về JavaOOP (1 video khoảng 2-5 phút).
+Ngày 21/3/2022, tôi học gần hết 24 video lập trình Android căn bản, và vướng mắc tại phần Custom ListView, sau đó tôi phải dành đâu đó 7-8 ngày học hết 100 video về JavaOOP (1 video khoảng 2-5 phút).
 Đến đầu tháng 4, tôi quyết định đẩy lên học 5 tiếng 1 ngày, và tăng thêm 15 phút mỗi ngày. Cỡ 13/4 - 14/4 tôi quyết định học 8 tiếng 1 ngày. Nhưng quyết định thôi, chứ thực hiện thì không dễ như thế. Thời gian đầu tôi chỉ học dc khoảng 6 - 7 tiếng trong 1 ngày, và sau đó tôi đã đặt báo thức ở máy tính những mốc thời gian cụ thể:
 ![](/images/diaryPost/Screenshot_1.png)
 Vì vướng lịch học trên trường nên tôi cố gắng hoàn thành nhất có thể (Đương nhiên có những hôm chỉ dc đến 4 tiếng vì vướng những môn học vào buổi sáng).
