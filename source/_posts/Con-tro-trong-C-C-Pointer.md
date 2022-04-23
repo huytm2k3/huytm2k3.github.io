@@ -78,9 +78,9 @@ Biến a và b ở đây là biến cục bộ (Local Variable), hãy coi mỗi 
 // Tham chiếu
 void swap(int *a,int *b){
     int tmp;
-    tmp = a;
-    a = b;
-    b = tmp;
+    tmp = *a;
+    *a = *b;
+    *b = tmp;
 }
 int main(){
     int a = 5,b = 10;
