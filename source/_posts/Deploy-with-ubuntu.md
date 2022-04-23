@@ -1,7 +1,7 @@
 ---
 title: Deploy with Ubuntu (ssh)
 date: 2022-04-21 14:47:08
-tags:
+tags: [ubuntu]
 ---
 
 

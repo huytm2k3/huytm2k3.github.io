@@ -1,7 +1,7 @@
 ---
 title: Danh sách liên kết (Linked List)
 date: 2022-04-21 18:31:05
-tags: "C/C++"
+tags: [C,C++,C/C++,linked-list]
 ---
 
 ## Mở đầu
@@ -9,7 +9,7 @@ tags: "C/C++"
 Bài viết này dựa trên 15 tiếng học Linked list của mình, sẽ chia sẻ tất cả những thứ cơ bản mà mình biết về nó.
 Mọi thắc mắc xin liên hệ tới:
 - Facebook: https://www.facebook.com/profile.php?id=100072417355186 (Tạ Minh Huy)
-- Zalo: 0562093951
+- Zalo: 0522566897
 - Email: Huyat180522@gmail.com
 
 ### Khái niệm

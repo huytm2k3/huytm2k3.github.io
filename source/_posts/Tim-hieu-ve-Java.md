@@ -1,7 +1,7 @@
 ---
 title: Tìm hiểu về Java OOP (Hướng đối tượng)
 date: 2022-03-30 16:36:01
-tags:
+tags: [java, javaOOP]
 ---
 
 ## Java Feature

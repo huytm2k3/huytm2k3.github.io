@@ -1,7 +1,7 @@
 ---
 title: Tìm hiểu về android
 date: 2022-03-30 16:00:44
-tags:
+tags: [android,java]
 ---
 
 ## 1. Các phần cơ bản trong 1 project android.

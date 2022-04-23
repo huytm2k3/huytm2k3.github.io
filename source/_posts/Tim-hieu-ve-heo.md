@@ -1,7 +1,7 @@
 ---
 title: Tìm hiểu về hexo
 date: 2022-03-30 16:04:43
-tags:
+tags: [hexo]
 ---
 
 ## Hexo và github pages
