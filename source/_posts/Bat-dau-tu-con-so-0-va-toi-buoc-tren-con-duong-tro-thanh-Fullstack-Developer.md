@@ -9,7 +9,7 @@ Mọi thắc mắc xin liên hệ tới:
 - Facebook: https://www.facebook.com/profile.php?id=100072417355186 (Tạ Minh Huy)
 - Zalo: 0522566897
 - Email: Huyat180522@gmail.com
-## Con số 0
+## Khởi đầu
 Anh trai tôi hơn tôi tới 7 tuổi, với lời hứa là thi vào cấp 3 được trên 40 điểm sẽ có quà. Năm đó đề nó dễ =)) thế là tôi xin nhẹ 41.25 mặc dù lực học tôi chỉ ở mức trung bình khá. Như lời hứa thì tôi được tặng 1 con laptop (Đến giờ vẫn còn giữ), thời điểm đó nó quá mức ngon so với 1 đứa mới học lớp 9 như tôi. Bằng 1 cách nào đó tôi được anh tôi dạy về html và css.
 Không phải là hồi đó tôi đã có đam mê với lập trình hay là gì cả, bản thân tôi thấy cái đó nó vừa hay vừa đẹp, thế là bắt anh tôi dạy. Nhưng tôi chỉ biết làm những cái trông rất chi là trẻ con, tạo những cái nút, tạo những cái radioButton hay là hộp Text Box và một thời gian thì tôi bỏ, cái laptop đó tôi để chơi game.
 Cho đến năm lớp 12 (Tôi không nhớ rõ thời gian cụ thể) thì anh tôi sang Hàn Quốc du học , mà bản thân tôi từng đó tuổi rồi chưa biết mình thích gì. Lúc đó tôi lại nhận được 1 món quà nữa, một cái PC với cái màn hình to nhất tôi từng được dùng. Tôi với gia đình tôi đều hướng cho tôi học IT (Giống anh của tôi) và đương nhiên rồi, tôi cũng đặt nguyện vọng vào HaUI (Anh tôi cũng học ở đó). Cho tới đợt đổi nguyện vọng, tôi có hỏi anh tôi và anh tôi hướng cho tôi sang học An toàn thông tin. Lúc đó tôi có 2 lựa chọn, hoặc là vào Học viện Công nghệ Bưu chính viễn thông (PTIT), Học viện Kỹ thuật mật mã (KMA). Hai trường đó được tôi để vào 2 nguyện vọng đầu. Khoảng thời gian ôn thi (Tầm tháng 6) thì mẹ tôi lỡ làm vỡ cái màn hình của PC anh tôi tặng, từ đó tôi bớt chơi game đi và quay lại dùng cái laptop để học.
