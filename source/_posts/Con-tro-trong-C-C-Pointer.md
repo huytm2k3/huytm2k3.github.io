@@ -99,4 +99,49 @@ Khi truyền vào tham chiếu, tức là nhà "main" cho phép nhà "swap" có 
 - Khi tham chiếu, hàm main truyền vào chính là "địa chỉ" của biến a và b nên hàm swap có thể trực tiếp sửa đổi giá trị biến a, b ở hàm main.
 
 Vì vậy, không phải ngẫu nhiên mà hàm scanf phải luôn truyền vào địa chỉ của một biến.
+
+### Con trỏ tới mảng một chiều (Array)
+
+Có lẽ các bạn đã quá quen với việc làm việc và truy xuất đến một phần tử trong mảng một/hai chiều theo cách thông thường:
+
+Example:
+
+```C
+int arr[] = {1,2,3,4,5};
+printf("%d",arr[1]); // Output : 2
+```
+
+Nhưng thực chất có một cách nữa để truy xuất tới một phần tử trong mảng bằng CON TRỎ.
+
+```C
+int arr[] = {1,2,3,4,5};
+printf("%d",*(arr+1)); // Output : 2
+```
+Có thể coi arr[i] tương đương với *(arr+i), vì 2 phần tử trong 1 mảng 1 chiều có địa chỉ ô nhớ liền kề nhau.
+
+```C
+int arr[] = {1,2,3,4,5};
+for(int i=0;i<5;i++){
+    printf("%d",*(arr+i)); // Output: 12345
+}
+// Hay là nhập:
+int arr2[5];
+for(int i=0;i<5;i++){
+    scanf("%d",&*(arr+i)); // &*(arr+i) tương đương với &a[i]
+}
+```
+
+### Con trỏ tới mảng 2 chiều (Matrix)
+
+Nó khá giống với nhập và xuất mảng một chiều
+```C
+int matrix[] = {{1,2},{3,4},{5,6}};
+printf("%d",**a) // Output: 1
+printf("%d",*(*(a+0)+1)); // Output: 2
+```
+Có thể hiểu rằng: * (*(a+i)+j) tương đương với a[i][j]
+
+
+
+
 Bài viết này đang trong quá trình hoàn thiện thêm nội dung, Thank you for all <3 !
