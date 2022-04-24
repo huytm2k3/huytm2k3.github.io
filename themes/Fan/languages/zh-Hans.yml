@@ -1,7 +1,7 @@
 copy:
-  success: 复制成功
-  error: 复制错误
-  noSupport: 浏览器不支持
+  success: Success
+  error: Error
+  noSupport: No Support
 
 algolia_search:
   input_placeholder: 搜索文章
@@ -18,11 +18,11 @@ menu:
   schedule: Schedule
   sitemap: Sitemap
   commonweal: 公益404
-  friendlink: 友链
+  friendlink: FriendLink
 
 sidebar:
   overview: Overview
-  toc: 文章目录
+  toc: Post Folder
   catalog: Catalog
   have_read: Have read
 
@@ -40,8 +40,8 @@ post:
   min2read: 阅读时长
   totalcount: Site words total count
   copyright:
-    author: 本文作者
-    link: 本文链接
+    author: Author
+    link: Link
     copyright_notice: 版权声明
     copyright_content: '本博客所有文章除特别声明外，均采用 <a href="%s">%s</a> 许可协议。转载请注明来自 <a href="%s">%s</a>！'
 
@@ -72,10 +72,10 @@ counter:
     other: "目前共计 %d 篇日志。"
 
 state:
-  posts: 日志
-  pages: 页面
-  tags: 标签
-  categories: 分类
+  posts: Post
+  pages: Page
+  tags: Tags
+  categories: Categories
 
 reward:
   donate: 打赏
