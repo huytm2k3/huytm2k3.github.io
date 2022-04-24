@@ -14,7 +14,7 @@
 <meta property="og:description" content="Mở đầuBài viết này dựa trên 5 tiếng tìm hiểu về con trỏ (Pointer) của mình. Sẽ cố gắng chia sẻ những thứ cơ bản mà mình biết về nó, hi vọng phần nào đó sẽ giúp đỡ các bạn trong quá trình học. Mọi thắc">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-23T19:55:57.000Z">
-<meta property="article:modified_time" content="2022-04-23T13:12:54.795Z">
+<meta property="article:modified_time" content="2022-04-24T09:52:43.149Z">
 <meta property="article:author" content="Ta Minh Huy">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="C++">
@@ -104,7 +104,7 @@
 <ul>
 <li>Facebook: <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100072417355186">https://www.facebook.com/profile.php?id=100072417355186</a> (Tạ Minh Huy)</li>
 <li>Zalo: 0522566897</li>
-<li>Email: <a href="mailto:&#x48;&#x75;&#x79;&#x61;&#116;&#x31;&#x38;&#x30;&#53;&#x32;&#50;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x48;&#x75;&#x79;&#x61;&#116;&#x31;&#x38;&#x30;&#53;&#x32;&#50;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;</a></li>
+<li>Email: <a href="mailto:&#x48;&#x75;&#x79;&#x61;&#116;&#x31;&#x38;&#48;&#x35;&#50;&#50;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#x48;&#x75;&#x79;&#x61;&#116;&#x31;&#x38;&#48;&#x35;&#50;&#50;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a></li>
 </ul>
 <h2 id="Khai-niem"><a href="#Khai-niem" class="headerlink" title="Khái niệm"></a>Khái niệm</h2><p>Từ trước tới nay, con trỏ là thứ mà đa số các sinh viên IT năm nhất đau đầu. Vậy con trỏ (pointer) là gì?</p>
 <p>Con trỏ thực tế cũng chỉ là một biến, có thể khai báo, khởi tạo và lưu trữ giá trị và có địa chỉ riêng của nó. Nhưng con trỏ không lưu trữ giá trị bình thường mà là lưu trữ địa chỉ.<br>Phần ví dụ tôi sẽ dùng ngôn ngữ C.</p>
@@ -128,12 +128,25 @@
 <li>Khi tham trị, hàm main chỉ truyền vào hàm swap là “giá trị” của a và b, nên dù có thay đổi cũng không ảnh hưởng đến giá trị của biến a, b ở hàm main.</li>
 <li>Khi tham chiếu, hàm main truyền vào chính là “địa chỉ” của biến a và b nên hàm swap có thể trực tiếp sửa đổi giá trị biến a, b ở hàm main.</li>
 </ul>
-<p>Vì vậy, không phải ngẫu nhiên mà hàm scanf phải luôn truyền vào địa chỉ của một biến.<br>Bài viết này đang trong quá trình hoàn thiện thêm nội dung, Thank you for all &lt;3 !</p>
+<p>Vì vậy, không phải ngẫu nhiên mà hàm scanf phải luôn truyền vào địa chỉ của một biến.</p>
+<h3 id="Con-tro-toi-mang-mot-chieu-Array"><a href="#Con-tro-toi-mang-mot-chieu-Array" class="headerlink" title="Con trỏ tới mảng một chiều (Array)"></a>Con trỏ tới mảng một chiều (Array)</h3><p>Có lẽ các bạn đã quá quen với việc làm việc và truy xuất đến một phần tử trong mảng một&#x2F;hai chiều theo cách thông thường:</p>
+<p>Example:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,arr[<span class="number">1</span>]); <span class="comment">// Output : 2</span></span><br></pre></td></tr></table></figure>
+
+<p>Nhưng thực chất có một cách nữa để truy xuất tới một phần tử trong mảng bằng CON TRỎ.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,*(arr+<span class="number">1</span>)); <span class="comment">// Output : 2</span></span><br></pre></td></tr></table></figure>
+<p>Có thể coi arr[i] tương đương với *(arr+i), vì 2 phần tử trong 1 mảng 1 chiều có địa chỉ ô nhớ liền kề nhau.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,*(arr+i)); <span class="comment">// Output: 12345</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Hay là nhập:</span></span><br><span class="line"><span class="type">int</span> arr2[<span class="number">5</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;*(arr+i)); <span class="comment">// &amp;*(arr+i) tương đương với &amp;a[i]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Con-tro-toi-mang-2-chieu-Matrix"><a href="#Con-tro-toi-mang-2-chieu-Matrix" class="headerlink" title="Con trỏ tới mảng 2 chiều (Matrix)"></a>Con trỏ tới mảng 2 chiều (Matrix)</h3><p>Nó khá giống với nhập và xuất mảng một chiều</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> matrix[] = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>&#125;&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,**a) <span class="comment">// Output: 1</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,*(*(a+<span class="number">0</span>)+<span class="number">1</span>)); <span class="comment">// Output: 2</span></span><br></pre></td></tr></table></figure>
+<p>Có thể hiểu rằng: * (*(a+i)+j) tương đương với a[i][j]</p>
+<p>Bài viết này đang trong quá trình hoàn thiện thêm nội dung, Thank you for all &lt;3 !</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/23/Con-tro-trong-C-C-Pointer/" data-id="cl2bvtf0p000196oq1y3036zm" data-title="Con trỏ trong C/C++(Pointer)" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/04/23/Con-tro-trong-C-C-Pointer/" data-id="cl2d43ujh0000bxofa7gr4h9i" data-title="Con trỏ trong C/C++(Pointer)" class="article-share-link">Share</a>
       
       
       
@@ -146,9 +159,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2022/04/23/Bat-dau-tu-con-so-0-va-toi-buoc-tren-con-duong-tro-thanh-Fullstack-Developer/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/04/23/Window-Subsystem-Linux-WSL/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Bắt đầu từ con số 0 và tôi bước trên con đường trở thành Fullstack Developer</div>
+      <div class="article-nav-title">Window Subsystem Linux (WSL)</div>
     </a>
   
 </nav>
@@ -168,7 +181,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/diary/" rel="tag">diary</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullstack-developer/" rel="tag">fullstack-developer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaOOP/" rel="tag">javaOOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked-list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pointer/" rel="tag">pointer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/" rel="tag">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaOOP/" rel="tag">javaOOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked-list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pointer/" rel="tag">pointer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/" rel="tag">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li></ul>
     </div>
   </div>
 
@@ -178,7 +191,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/C-C/" style="font-size: 20px;">C/C++</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/diary/" style="font-size: 10px;">diary</a> <a href="/tags/fullstack-developer/" style="font-size: 10px;">fullstack-developer</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/javaOOP/" style="font-size: 10px;">javaOOP</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked-list</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pointer/" style="font-size: 10px;">pointer</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 20px;">windows</a> <a href="/tags/wsl/" style="font-size: 10px;">wsl</a>
+      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/C-C/" style="font-size: 20px;">C/C++</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/javaOOP/" style="font-size: 10px;">javaOOP</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked-list</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pointer/" style="font-size: 10px;">pointer</a> <a href="/tags/ubuntu/" style="font-size: 20px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 20px;">windows</a> <a href="/tags/wsl/" style="font-size: 10px;">wsl</a>
     </div>
   </div>
 
@@ -204,10 +217,6 @@
           </li>
         
           <li>
-            <a href="/2022/04/23/Bat-dau-tu-con-so-0-va-toi-buoc-tren-con-duong-tro-thanh-Fullstack-Developer/">Bắt đầu từ con số 0 và tôi bước trên con đường trở thành Fullstack Developer</a>
-          </li>
-        
-          <li>
             <a href="/2022/04/23/Window-Subsystem-Linux-WSL/">Window Subsystem Linux (WSL)</a>
           </li>
         
@@ -217,6 +226,10 @@
         
           <li>
             <a href="/2022/04/21/Deploy-with-ubuntu/">Deploy with Ubuntu (ssh)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/21/Convert-GIS-file-with-Gdal/">Convert GIS file with Gdal</a>
           </li>
         
       </ul>
