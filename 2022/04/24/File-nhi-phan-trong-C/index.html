@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>File nhị phân trong C (Binary File) | My name is TaMinhHuy! Welcome to my Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mở đầuBài viết này dựa trên 3 tiếng tìm hiểu về đọc&#x2F;ghi file nhị phân trong C. Sẽ cố gắng chia sẻ những thứ cơ bản mình biết về nó, hi vọng phần nào đó sẽ giúp đỡ các bạn trong quá trình học. Mọi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="File nhị phân trong C (Binary File)">
+<meta property="og:url" content="http://example.com/2022/04/24/File-nhi-phan-trong-C/index.html">
+<meta property="og:site_name" content="My name is TaMinhHuy! Welcome to my Blog">
+<meta property="og:description" content="Mở đầuBài viết này dựa trên 3 tiếng tìm hiểu về đọc&#x2F;ghi file nhị phân trong C. Sẽ cố gắng chia sẻ những thứ cơ bản mình biết về nó, hi vọng phần nào đó sẽ giúp đỡ các bạn trong quá trình học. Mọi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-24T16:52:50.000Z">
+<meta property="article:modified_time" content="2022-04-24T11:17:55.623Z">
+<meta property="article:author" content="Ta Minh Huy">
+<meta property="article:tag" content="C">
+<meta property="article:tag" content="file">
+<meta property="article:tag" content="binary-file">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="My name is TaMinhHuy! Welcome to my Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My name is TaMinhHuy! Welcome to my Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-File-nhi-phan-trong-C" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/04/24/File-nhi-phan-trong-C/" class="article-date">
+  <time class="dt-published" datetime="2022-04-24T16:52:50.000Z" itemprop="datePublished">2022-04-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      File nhị phân trong C (Binary File)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Mo-dau"><a href="#Mo-dau" class="headerlink" title="Mở đầu"></a>Mở đầu</h2><p>Bài viết này dựa trên 3 tiếng tìm hiểu về đọc&#x2F;ghi file nhị phân trong C. Sẽ cố gắng chia sẻ những thứ cơ bản mình biết về nó, hi vọng phần nào đó sẽ giúp đỡ các bạn trong quá trình học.</p>
+<p>Mọi thắc mắc xin liên hệ tới:</p>
+<ul>
+<li>Facebook: <a target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100072417355186">https://www.facebook.com/profile.php?id=100072417355186</a> (Tạ Minh Huy)</li>
+<li>Zalo: 0522566897</li>
+<li>Email: <a href="mailto:&#72;&#x75;&#121;&#97;&#116;&#49;&#56;&#x30;&#x35;&#50;&#50;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#72;&#x75;&#121;&#97;&#116;&#49;&#56;&#x30;&#x35;&#50;&#50;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></li>
+</ul>
+<h2 id="Khai-niem"><a href="#Khai-niem" class="headerlink" title="Khái niệm"></a>Khái niệm</h2><p>Source: <a target="_blank" rel="noopener" href="https://www.techtarget.com/whatis/definition/binary-file#:~:text=A%20binary%20file%20is%20a,certain%20place%20within%20the%20file">https://www.techtarget.com/whatis/definition/binary-file#:~:text=A%20binary%20file%20is%20a,certain%20place%20within%20the%20file</a>.</p>
+<p>Dù Google có rất nhiều nhưng mình xin tóm tắt lại:<br>Tệp nhị phân là một tệp mà nội dung của nó phải được chương trình hoặc bộ xử lý phần cứng hiểu trước chính xác cách nó được định dạng. Có nghĩa là, tệp không ở bất kỳ định dạng có thể nhận dạng bên ngoài nào để bất kỳ chương trình nào muốn tìm kiếm dữ liệu nhất định tại một vị trí nhất định trong tệp.</p>
+<h2 id="Cach-dung"><a href="#Cach-dung" class="headerlink" title="Cách dùng"></a>Cách dùng</h2><h3 id="Khai-bao-file"><a href="#Khai-bao-file" class="headerlink" title="Khai báo file"></a>Khai báo file</h3><p>Trước tiên, chúng ta cần khai báo một con trỏ kiểu file. Việc khai báo này là cần thiết để có sự kết nối giữa chương trình và tập tin cần thao tác.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FILE *f;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Thao-tac-mo-file"><a href="#Thao-tac-mo-file" class="headerlink" title="Thao tác mở file"></a>Thao tác mở file</h3><p>Cấu trúc hàm fopen(): </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fopen(&lt;filename&gt;,&lt;mode&gt;)</span><br><span class="line">// Example:</span><br><span class="line"></span><br><span class="line">fopen(&quot;myFile.txt&quot;,&quot;wb&quot;) // wb: write binary (Ghi kiểu nhị phân)</span><br><span class="line">// wb cho phép bạn mở và ghi vào file theo kiểu nhị phân.</span><br><span class="line">fopen(&quot;myFile.txt,&quot;rb&quot;) // rb: read binary (Đọc file theo kiểu nhị phân)</span><br><span class="line">// rb chỉ cho phép bạn đọc mà không được ghi (Nhị phân).</span><br></pre></td></tr></table></figure>
+
+<h3 id="Thao-tac-ghi-file"><a href="#Thao-tac-ghi-file" class="headerlink" title="Thao tác ghi file"></a>Thao tác ghi file</h3><p>Hàm fwrite():</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fwrite(address_data,size_data,numbers_data,pointer_to_file);</span><br></pre></td></tr></table></figure>
+<p>Example:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">threeNum</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">   <span class="type">int</span> n1, n2, n3;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> n;</span><br><span class="line">   <span class="class"><span class="keyword">struct</span> <span class="title">threeNum</span> <span class="title">num</span>;</span></span><br><span class="line">   FILE *fptr;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">if</span> ((fptr = fopen(<span class="string">&quot;C:\\program.bin&quot;</span>,<span class="string">&quot;wb&quot;</span>)) == <span class="literal">NULL</span>)&#123;</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">&quot;Error! opening file&quot;</span>);</span><br><span class="line"> </span><br><span class="line">       <span class="comment">// Program exits if the file pointer returns NULL.</span></span><br><span class="line">       <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">for</span>(n = <span class="number">1</span>; n &lt; <span class="number">5</span>; ++n)</span><br><span class="line">   &#123;</span><br><span class="line">      num.n1 = n;</span><br><span class="line">      num.n2 = <span class="number">5</span>*n;</span><br><span class="line">      num.n3 = <span class="number">5</span>*n + <span class="number">1</span>;</span><br><span class="line">      fwrite(&amp;num, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> threeNum), <span class="number">1</span>, fptr); </span><br><span class="line">   &#125;</span><br><span class="line">   fclose(fptr); </span><br><span class="line">  </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Thao-tac-doc-file"><a href="#Thao-tac-doc-file" class="headerlink" title="Thao tác đọc file"></a>Thao tác đọc file</h3><p>Hàm fread():</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fread(address_data,size_data,numbers_data,pointer_to_file);</span><br></pre></td></tr></table></figure>
+
+<p>Example:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">threeNum</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">   <span class="type">int</span> n1, n2, n3;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> n;</span><br><span class="line">   <span class="class"><span class="keyword">struct</span> <span class="title">threeNum</span> <span class="title">num</span>;</span></span><br><span class="line">   FILE *fptr;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">if</span> ((fptr = fopen(<span class="string">&quot;C:\\program.bin&quot;</span>,<span class="string">&quot;rb&quot;</span>)) == <span class="literal">NULL</span>)&#123;</span><br><span class="line">       <span class="built_in">printf</span>(<span class="string">&quot;Error! opening file&quot;</span>);</span><br><span class="line"> </span><br><span class="line">       <span class="comment">// Program exits if the file pointer returns NULL.</span></span><br><span class="line">       <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">for</span>(n = <span class="number">1</span>; n &lt; <span class="number">5</span>; ++n)</span><br><span class="line">   &#123;</span><br><span class="line">      fread(&amp;num, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> threeNum), <span class="number">1</span>, fptr); </span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;n1: %d\tn2: %d\tn3: %d&quot;</span>, num.n1, num.n2, num.n3);</span><br><span class="line">   &#125;</span><br><span class="line">   fclose(fptr); </span><br><span class="line">  </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Bài tập mẫu của phần này là: Nhập vào danh sách sinh viên, ghi vào file theo kiểu nhị phân.</p>
+<p>Full source code: <a target="_blank" rel="noopener" href="http://codepad.org/aZlVtgsd">http://codepad.org/aZlVtgsd</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/04/24/File-nhi-phan-trong-C/" data-id="cl2d75fd50004b8or8p0x22l5" data-title="File nhị phân trong C (Binary File)" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binary-file/" rel="tag">binary-file</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file/" rel="tag">file</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/04/23/Con-tro-trong-C-C-Pointer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Con trỏ trong C/C++(Pointer)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-file/" rel="tag">binary-file</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/file/" rel="tag">file</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaOOP/" rel="tag">javaOOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linked-list/" rel="tag">linked-list</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pointer/" rel="tag">pointer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/" rel="tag">windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/C-C/" style="font-size: 15px;">C/C++</a> <a href="/tags/android/" style="font-size: 10px;">android</a> <a href="/tags/binary-file/" style="font-size: 10px;">binary-file</a> <a href="/tags/file/" style="font-size: 10px;">file</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/javaOOP/" style="font-size: 10px;">javaOOP</a> <a href="/tags/linked-list/" style="font-size: 10px;">linked-list</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/pointer/" style="font-size: 10px;">pointer</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/windows/" style="font-size: 15px;">windows</a> <a href="/tags/wsl/" style="font-size: 10px;">wsl</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/04/24/File-nhi-phan-trong-C/">File nhị phân trong C (Binary File)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/23/Con-tro-trong-C-C-Pointer/">Con trỏ trong C/C++(Pointer)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/23/Window-Subsystem-Linux-WSL/">Window Subsystem Linux (WSL)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/21/Linked-list/">Danh sách liên kết (Linked List)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/21/Deploy-with-ubuntu/">Deploy with Ubuntu (ssh)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Ta Minh Huy<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
