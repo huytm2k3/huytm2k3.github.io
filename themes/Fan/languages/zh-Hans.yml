@@ -9,14 +9,14 @@ algolia_search:
   hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒"
 
 menu:
-  home: 首页
-  archives: 归档
-  categories: 分类
-  tags: 标签
-  about: 关于
-  search: 搜索
-  schedule: 日程表
-  sitemap: 站点地图
+  home: Home
+  archives: Archives
+  categories: Categories
+  tags: Tags
+  about: About
+  search: Search
+  schedule: Schedule
+  sitemap: Sitemap
   commonweal: 公益404
   friendlink: 友链
 
@@ -27,16 +27,16 @@ sidebar:
   have_read: 您已阅读了
 
 post:
-  created: 创建于
-  modified: 更新于
-  sticky: 置顶
-  posted: 发表于
-  in: 分类于
-  read_more: 阅读全文
-  untitled: 未命名
+  created: Created
+  modified: Modified
+  sticky: Sticky
+  posted: Posted
+  in: In
+  read_more: Read_more
+  untitled: Untitle
   toc_empty: 此文章未包含目录
-  visitors: 热度
-  wordcount: 字数统计
+  visitors: Visitors
+  wordcount: Wordcount
   min2read: 阅读时长
   totalcount: Site words total count
   copyright:
