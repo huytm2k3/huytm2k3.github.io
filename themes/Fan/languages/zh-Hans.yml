@@ -21,10 +21,10 @@ menu:
   friendlink: 友链
 
 sidebar:
-  overview: 站点概览
+  overview: Overview
   toc: 文章目录
-  catalog: 目录
-  have_read: 您已阅读了
+  catalog: Catalog
+  have_read: Have read
 
 post:
   created: Created
