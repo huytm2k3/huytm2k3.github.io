@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Who is up to 15?</title>
+    <style>
+        body{
+            padding: 100px;
+        }
+        .wrapper{
+            border: solid 1px grey;
+            margin: auto;
+            width: 500px;
+            padding: 10px;
+            height: 300px;
+        }
+        .wrapper .message{
+
+        }
+        .wrapper .message .messageTilte{
+            color: red;
+            font-weight: bold;
+        }
+        .wrapper .message .messageContent{
+            color: green;
+            font-weight: bold;
+        }
+        .wrapper .playerInfo{
+            float: left;
+            margin-top: 10px;
+            border: 1px solid grey;
+            width: 240px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .wrapper .botInfo{
+            float: left;
+            margin-top: 10px;
+            border: 1px solid grey;
+            width: 240px;
+            height: 100px;
+        }
+        .wrapper .playerInfo .head{
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+        .wrapper .botInfo .head{
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: red;
+        }
+        .wrapper .playerInfo .body{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .wrapper .playerInfo .body .pointContent{
+            font-size: 32px;
+            color: green;
+        }
+        .wrapper .botInfo .body{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .wrapper .botInfo .body .pointContent{
+            font-size: 32px;
+            color: red;
+        }
+        .control{
+            
+        }
+        .control button {
+            margin-top:20px;
+            width: 49%;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            background-color: grey;
+            cursor: pointer;
+        }
+        .control .active{
+            background-color: green;
+        }
+        .wrapper .number{
+            float: clear;
+            text-align: center;
+            margin-top: 100px;
+            padding: 30px;
+        }
+        .wrapper .number .numberTitle{
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+        }
+        .wrapper .number .numberContent{
+            font-size: 40px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="message">
+            <span class="messageTilte">Message: </span>
+            <span class="messageContent">The player's turn</span>
+        </div>
+        <div class="info">
+            <div class="playerInfo">
+                <div class="head">
+                    Player
+                </div>
+                <div class="body">
+                    <span class="pointContent">0</span>
+                    <span class="pointTitle">win</span>
+                </div>
+            </div>
+            <div class="botInfo">
+                <div class="head">
+                    Bot
+                </div>
+                <div class="body">
+                    <span class="pointContent">0</span>
+                    <span class="pointTitle">win</span>
+                </div>
+            </div>
+        </div>
+        <div class="number">
+            <span class="numberTitle">Number: </span>
+            <span class="numberContent">0</span>
+        </div>
+        <div class="control">
+            <button class="up1Btn upBtn active">Up 1</button>
+            <button class="up2Btn upBtn active">Up 2</button>
+        </div>
+    </div>
+    <script>
+        let number = 0;
+        let playerPoint = 0;
+        let botPoint = 0;
+        let turn; // turn = 0 - player turn , turn = 1 - bot turn
+        function checkWin(){
+            if(number==15){
+                if(turn==0){
+                    playerPoint++;
+                    alert("Player Win!")
+                    updatePoint();
+                    window.location.reload(true);
+                }else if(turn==1){
+                    botPoint++
+                    alert("Bot Win!")
+                    updatePoint();
+                    window.location.reload(true);
+                }
+            }
+        }
+        function AI(){
+            if(number==1||number==2){
+                number=3;
+            }else if(number==4||number==5){
+                number=6;
+            }else if(number==7||number==8){
+                number=9
+            }else if(number==10||number==11){
+                number=12
+            }else if(number==13||number==14){
+                number=15
+            }
+            updateNumber();
+            checkWin();
+            turn = 0;
+            updateMessage();
+        }
+        function updateMessage(){
+            if(turn == 0){
+                $('.messageContent').html("The player's turn")
+            }else if(turn == 1){
+                $('.messageContent').html("The bot's turn")
+            }
+        }
+        function updateNumber(){
+            $('.numberContent').html(number)
+        }
+        function updatePoint(){
+            $('.playerInfo .pointContent').html(playerPoint);
+            $('.botInfo .pointContent').html(botPoint);
+        }
+        function activeBtn(){
+            AI();
+            $('.upBtn').removeAttr("disabled")
+            $('.upBtn').addClass('active')
+        }
+        function unActiveBtn(){
+            $('.upBtn').attr("disabled",true)
+            $('.upBtn').removeClass('active')
+        }
+        $('.up1Btn').click(function(){
+            number+=1;
+            updateNumber();
+            unActiveBtn();
+            setTimeout(activeBtn,1000)
+            turn = 1;
+            updateMessage();
+        })
+        $('.up2Btn').click(function(){
+            number+=2;
+            updateNumber()
+            unActiveBtn();
+            setTimeout(activeBtn,1000);
+            turn = 1;
+            updateMessage();
+        })
+    </script>
+</body>
+</html>
