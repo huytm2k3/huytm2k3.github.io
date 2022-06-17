@@ -12,7 +12,7 @@ Xây dựng website và các ứng dụng web bằng ngôn ngữ lập trình Ja
 
 Ngày nay, ngôn ngữ lập trình Java thường được sử dụng để xây dựng các trang web thương mại điện tử, ứng dụng web cho các tổ chức chính phủ, tổ chức y tế, giáo dục, quốc phòng… bên cạnh đó, ngôn ngữ lập trình Java này còn được dùng để tạo ra các trò chơi trên nền tảng website, khai thác tối đa tính hấp dẫn của website. 
 
-Nguồn: https://codegym.vn/blog/2021/03/04/tai-lieu-lap-trinh-java-web/#:~:text=Java%20l%C3%A0%20m%E1%BB%99t%20trong%20nh%E1%BB%AFng,nh%C6%B0%20HTML%2C%20Javascript%2C%20CSS%E2%80%A6
+Nguồn: https://codegym.vn/
 
 ### Back-end Developer
 
