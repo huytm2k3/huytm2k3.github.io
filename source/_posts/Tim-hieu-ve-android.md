@@ -36,6 +36,7 @@ tags: [android,java]
 - ListView: Danh sách
 ### 1. TextView
 ### 2. EditText
+<!--more-->
 ### 3. Button
 ### 4. RadioButton
     isChecked() trả về True False (Code Java)

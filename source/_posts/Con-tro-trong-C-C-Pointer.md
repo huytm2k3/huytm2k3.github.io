@@ -131,6 +131,8 @@ for(int i=0;i<5;i++){
 }
 ```
 
+<!--more-->
+
 ### Con trỏ tới mảng 2 chiều (Matrix)
 
 Nó khá giống với nhập và xuất mảng một chiều

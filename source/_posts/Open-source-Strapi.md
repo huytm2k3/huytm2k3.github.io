@@ -48,6 +48,9 @@ Tạo Collection type Category với 1 trường "name" (Text) và một trườ
 
 Sau đó click vào nút Save
 
+
+<!--more-->
+
 #### Bước 2: Sử dụng Collection type để tạo các Entries mới
 
 ##### Add Restaurant

@@ -67,6 +67,7 @@ Hàm main không nằm trong public class:
 ## Package
 Package được coi như 1 thư mục, 1 package có thể chứa nhiều package con khác hoặc chứa các file class, interface.
 ## Access modifiers
+<!--more-->
 ![](/images/JavaPost/a25.png)
 ![](/images/JavaPost/a26.png)
 - Public: Cho phép truy cập tất cả mọi nơi

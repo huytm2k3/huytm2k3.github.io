@@ -137,6 +137,9 @@ public class PhotoViewPagerAdapter extends PagerAdapter {
 ### 5. Thêm 1 số hình ảnh cần slide vào thư mục res/drawable
 ![](/images/ImageSliderPost/a2.png)
 
+
+<!--more-->
+
 ### 6. Ở class MainActivity, ánh xạ ViewPager, dùng Adapter và List để khởi tạo ViewPager
 ```java
 package mhuy.com.hnshop;

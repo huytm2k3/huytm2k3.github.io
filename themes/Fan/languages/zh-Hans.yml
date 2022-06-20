@@ -9,9 +9,9 @@ algolia_search:
   hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒"
 
 menu:
-  home: Home
-  archives: Archives
-  categories: Categories
+  home: Trang chủ
+  archives: Mục lục
+  categories: Danh mục
   tags: Tags
   about: About
   search: Search
@@ -24,7 +24,7 @@ sidebar:
   overview: Overview
   toc: Post Folder
   catalog: Catalog
-  have_read: Have read
+  have_read: Đã đọc
 
 post:
   created: Created
@@ -32,7 +32,7 @@ post:
   sticky: Sticky
   posted: Posted
   in: In
-  read_more: Read_more
+  read_more: Đọc tiếp
   untitled: Untitle
   toc_empty: 此文章未包含目录
   visitors: Visitors

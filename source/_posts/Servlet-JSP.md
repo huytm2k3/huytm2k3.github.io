@@ -303,6 +303,8 @@ public class RedirectServlet extends HttpServlet{
 
 Giờ tôi sẽ tạo 2 class ví dụ là Servlet1 (Class addCookie) và Servlet2(Class getCookie)
 
+<!--more-->
+
 ### Tạo Cookies
 Class Servlet 1:
 
@@ -481,7 +483,10 @@ public class Welcome extends HttpServlet{
 ## Java Servlet Session
 
 ### Giao thức HTTP
-![](/images/JavaServletPost/Screenshot_1.png)
+<center>
+<img src="../images/JavaServletPost/Screenshot_1.png">
+</center>
+
 ### Cách hoạt động
 * Cookies
 Set ID vào Cookie để nhận dạng
@@ -586,3 +591,147 @@ public class Session2 extends HttpServlet{
 * ...
 
 ### XML config
+
+Gần giống như config các class bình thường ở web.xml, web.xml có thể config cả filter.
+
+```xml
+<filter>
+	<filter-name>logger</filter-name>
+	<filter-class>com.huytm.filter.Logger</filter-class>
+</filter>
+  
+<filter-mapping>
+	<filter-name>logger</filter-name>
+	<url-pattern>/servlet1</url-pattern>
+</filter-mapping>
+```
+
+### Java config
+
+Filter cũng có thể config bằng Java config như class. Dùng WebFilter để config UrlPatterns.
+```java
+package com.huytm.filter;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+
+@WebFilter(urlPatterns= {"/servlet1"})
+public class Logger implements Filter{
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+		System.out.println("Filter 1");
+		// TODO Auto-generated method stub
+		chain.doFilter(request, response);
+	}
+
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+```
+### FilterConfig
+Khởi tạo giá trị params giống trong Class Servlet.
+
+## ServletContext
+
+ServletContext có thể lưu và dùng cho tất cả các servlet như một biến trong 1 project.
+
+Có thể dùng method
+* getServletContext().setAttribute(key, value) để khởi tạo Servlet Context.
+* getServletContext().getAttribute(key) để lấy giá trị Servlet Context.
+
+Hoặc khởi tạo ServetContext trong Web.xml như thế này :
+```xml
+<context-param>
+	<param-name>jdbc</param-name>
+	<param-value>mysql</param-value>
+</context-param>
+```
+
+Và khi đó, nhận giá trị bằng cách dùng method getServletContext.getInitParameter("jdbc");
+
+## Auto refresh
+
+Auto refresh trong Java Servlet sử dụng resp.setHeader("Refresh",time(s)) trong doGet.
+
+Examlple:
+```java
+package com.huytm.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns= {"/auto-refresh"})
+public class AutoRefresh extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		
+		resp.setHeader("Refresh","1");
+		
+		PrintWriter printWriter = resp.getWriter();
+		
+		printWriter.println("Thoi gian hien tai: " + new Date());
+		
+	}
+}
+```
+
+## WelcomeFile tag trong Web.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JavaServletTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+</web-app>
+```
+
+Đây là những trang mặc định khi url chỉ gọi tới tên project (localhost:8080/DemoServlet)
+
+Server sẽ tìm từng file có tên trong list từ trên xuống dưới, nếu tồn tại sẽ in ra trang web, nếu không sẽ trả về mã lỗi 404.
+
+## Handle bắt lỗi
+
+Khi trang web trả về một mã lỗi, thì server sẽ trả ra một giao diện tùy chỉnh chứ không phải là giao diện báo lỗi mặc định.
+
+```xml
+<error-page>
+  	<error-code>404</error-code>
+  	<location>/handle</location>
+</error-page>
+```
+Khi gặp mã lỗi 404, server sẽ trả về trang có urlPatterns là "/handle"

@@ -67,6 +67,9 @@ typedef struct
     // Mắt xích đầu và mắt xích cuối, tầm này mà còn tự hỏi là sao lại kiểu node thì ăn đấm ngay.
 } node;
 ```
+
+<!--more-->
+
 ### Hàm khởi tạo 1 node
 Một struct sinhVien không phải là 1 node, vì 1 node thì chứa 1 struct sinhVien và 1 con trỏ *next.
 Vậy chúng ta sẽ tạo 1 hàm, truyền vào 1 struct sinhVien và hàm sẽ trả ra 1 node mang data là sinh viên đó và 1 con trỏ next tới mắt xích tiếp theo.
