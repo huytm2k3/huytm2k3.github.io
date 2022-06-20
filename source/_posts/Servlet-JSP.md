@@ -240,7 +240,7 @@ public class FormPerson extends HttpServlet{
 	}
 }
 ```
-Class PersonSev:
+## Class PersonSev:
 ```java
 package com.huytm;
 
@@ -272,7 +272,7 @@ public class PersonSev extends HttpServlet{
 	}
 }
 ```
-Redirect chuyển hướng trang web trong java
+## Redirect chuyển hướng trang web trong java
 ```java
 package com.huytm;
 
@@ -293,5 +293,296 @@ public class RedirectServlet extends HttpServlet{
 }
 
 ```
+## Java servlet Cookies
+### Cookie là gì?
+* Cookie là một file text lưu ở phía browsers của client
+* Cookie lưu thông tin dạng key/value
+* Request sẽ gửi thông tin cookies trong header mỗi lần gọi
+* Java Servlet hỗ trợ http cookie
+* Có thời gian sống xác định
 
+Giờ tôi sẽ tạo 2 class ví dụ là Servlet1 (Class addCookie) và Servlet2(Class getCookie)
 
+### Tạo Cookies
+Class Servlet 1:
+
+```java
+package com.huytm;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.URLEncoder;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns= {"/servlet1"})
+public class Servlet1 extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		
+		PrintWriter printWriter = resp.getWriter();
+		
+		printWriter.println("Xin chao Ta Minh Huy");
+		
+		Cookie cookie = new Cookie("ten", URLEncoder.encode("ta minh huy","UTF-8"));
+		
+		cookie.setMaxAge(1000);
+		
+		resp.addCookie(cookie);
+		
+		
+	}
+}
+```
+
+### Get Cookies
+Class Servlet2
+
+```java
+package com.huytm;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns= {"/servlet2"})
+public class Servlet2 extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		
+		PrintWriter printWriter = resp.getWriter();
+		
+		Cookie[] cookies = req.getCookies();
+		
+		for(Cookie c : cookies) {
+			printWriter.println(c.getName() + ": " + c.getValue() + "<br/>");
+		}
+	}
+}
+```
+
+[ ] Lưu ý: Cookies không thể lưu được kí tự trắng, vì vậy bắt buộc phải dùng UrlEncode.
+
+### Xóa cookies
+
+```java
+if(c.getName().equals("ages")){
+	c.setMaxAge(0);
+	
+	resp.addCookie(c);
+}
+```
+
+## Login - Servlet Cookies
+
+Ví dụ phần này là khi người dùng nhập đúng username và password, sẽ Redirect về một trang web "Welcome" - Lưu cookie, còn nếu sai thì quay trở lại trang Login.
+
+Class Login
+```java
+package com.huytm.authen;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns= {"/login"})
+public class Login extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		PrintWriter printWriter = resp.getWriter();
+		
+		printWriter.println("<form action = '/JavaServletTest/login' method='post'>");
+		printWriter.println("Username: <input type='text' name='username'/>");
+		printWriter.println("Password: <input type='password' name='password' />");
+		printWriter.println("<input type='submit' value='Login' />");
+		printWriter.println("</form>");
+		
+		printWriter.close();
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		
+		if(username.equals("admin") && password.equals("123456")) {
+			
+			Cookie cookie = new Cookie ("username", username);
+			cookie.setMaxAge(30);
+			
+			resp.addCookie(cookie);
+			resp.sendRedirect("/JavaServletTest/welcome");
+		}else {
+			resp.sendRedirect("/JavaServletTest/login");
+		}
+		
+		
+	}
+	
+}
+```
+Class Welcome
+```java
+package com.huytm.authen;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(urlPatterns = {"/welcome"})
+public class Welcome extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		
+		PrintWriter printWriter = resp.getWriter();
+		
+		String username = "";
+		
+		Cookie[] cookies = req.getCookies();
+		
+		for(Cookie c: cookies) {
+			if(c.getName().equals("username")) {
+				username = c.getValue();
+			}
+		}
+		
+		printWriter.println("Xin chao " + username);
+	}
+}
+```
+## Java Servlet Session
+
+### Giao thức HTTP
+![](/images/JavaServletPost/Screenshot_1.png)
+### Cách hoạt động
+* Cookies
+Set ID vào Cookie để nhận dạng
+* Hidden Field trong Form
+Set id vào một trường ẩn trong form
+```html
+<input type="hidden" name="sessionid" value="12345">
+```
+* Url Rewriting
+http:/tutorialspoint.com/file.html;sessionid=12345
+
+### HttpSession
+* Là một interface trong Servlet giúp lưu các thông tin người dùng qua các servlet khác nhau.
+```java
+HttpSession session = request.getSession();
+```
+Cũng khá giống với cookie, cũng là setAttributes(name, value) và getSession
+Ví dụ lần này là class Session1 (Đặt giá trị Session) và class Session2 (Lấy giá trị Session và in ra màn hình).
+
+Class Session1
+```java
+package com.mhuy.session;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet(urlPatterns= {"/hello-session"})
+public class Session1 extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		HttpSession httpSession = req.getSession();
+		
+		httpSession.setAttribute("name", "taminhhuy");
+		
+		resp.setContentType("text/html");
+		
+		PrintWriter printWriter = resp.getWriter();
+		
+		printWriter.println("Xin chao taminhhuy");
+		
+	}
+}
+```
+Class Session2
+```java
+package com.mhuy.session;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet(urlPatterns = {"/session-2"})
+public class Session2 extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		
+		PrintWriter printWriter = resp.getWriter();
+		
+		String name = "";
+		
+		HttpSession httpSession = req.getSession();
+		
+		Object obj = httpSession.getAttribute("name");
+		
+		if(obj != null) {
+			name = String.valueOf(obj);
+		} else {
+			resp.sendRedirect("/JavaServletSession/hello-session");
+		}
+		
+		printWriter.println("Xin chao: " + name);
+		
+	}
+}
+```
+## Filter
+
+* Filter là một đối tượng dùng để xử lý request trươc khi gọi đến một servlet đích, và response trả về kết quả từ servlet.
+* Dùng nhiều filter một lúc
+* Dễ dàng tích hợp bất cứ lúc nào
+
+### Tác dụng của filter
+
+* Login
+* Check ip
+* Nén file
+* Validate dữ liệu
+* ...
+
+### XML config
