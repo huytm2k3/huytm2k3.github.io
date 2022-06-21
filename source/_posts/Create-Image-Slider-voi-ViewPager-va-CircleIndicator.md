@@ -2,6 +2,7 @@
 title: Create Image Slider với ViewPager và CircleIndicator
 date: 2022-06-08 10:11:42
 tags: [android, javaOOP, image-slider]
+categories: [Front-end]
 ---
 
 ## Mở đầu

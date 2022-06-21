@@ -2,6 +2,7 @@
 title: Danh sách liên kết (Linked List)
 date: 2022-04-21 18:31:05
 tags: [C,C++,C/C++,linked-list]
+categories: [Core]
 ---
 
 ## Mở đầu

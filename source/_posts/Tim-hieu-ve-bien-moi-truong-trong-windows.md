@@ -2,6 +2,7 @@
 title: Tim hieu ve bien moi truong trong windows
 date: 2022-03-30 15:45:59
 tags: [windows]
+categories: [Other]
 ---
 
 

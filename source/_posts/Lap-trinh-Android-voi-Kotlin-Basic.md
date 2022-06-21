@@ -2,6 +2,7 @@
 title: Lập trình Android với Kotlin Basic
 date: 2022-05-09 15:43:35
 tags: [kotlin, android]
+categories: [Front-end]
 ---
 ## Mở đầu
 

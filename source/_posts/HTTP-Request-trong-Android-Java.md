@@ -2,6 +2,7 @@
 title: HTTP Request trong Android (Java)
 date: 2022-05-24 15:38:35
 tags: [android, java]
+categories: [Back-end]
 ---
 
 ## Mở đầu

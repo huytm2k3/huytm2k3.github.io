@@ -1,7 +1,8 @@
 ---
 title: Servlet/JSP
 date: 2022-06-18 09:38:01
-tags:
+tags: [java, servlet/jsp, java-OOP]
+categories: [Back-end]
 ---
 
 # Servlet

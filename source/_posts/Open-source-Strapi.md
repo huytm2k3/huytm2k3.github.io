@@ -2,6 +2,7 @@
 title: Open source Strapi
 date: 2022-04-25 16:33:26
 tags: [strapi, nodejs]
+categories: [Back-end]
 ---
 ## Mở đầu
 

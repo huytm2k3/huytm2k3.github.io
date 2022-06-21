@@ -2,6 +2,7 @@
 title: File nhị phân trong C (Binary File)
 date: 2022-04-24 16:52:50
 tags: [C,file,binary-file]
+categories: [Core]
 ---
 ## Mở đầu
 

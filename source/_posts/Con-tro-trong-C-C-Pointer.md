@@ -2,6 +2,7 @@
 title: Con trỏ trong C/C++(Pointer)
 date: 2022-04-23 19:55:57
 tags: [C,C++,C/C++,pointer]
+categories: [Core]
 ---
 
 ## Mở đầu

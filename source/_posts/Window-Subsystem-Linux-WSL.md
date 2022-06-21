@@ -2,6 +2,7 @@
 title: Window Subsystem Linux (WSL)
 date: 2022-04-23 15:59:35
 tags: [windows,wsl,ubuntu,linux]
+categories: [Other]
 ---
 ## Giới thiệu
 
