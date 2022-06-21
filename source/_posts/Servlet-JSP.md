@@ -3,7 +3,9 @@ title: Servlet/JSP
 date: 2022-06-18 09:38:01
 tags:
 ---
-Java Servlet/JSP
+
+# Servlet
+
 ## Requirement
 	Java EE Eclipse
 ## Installation
@@ -734,4 +736,183 @@ Khi trang web trả về một mã lỗi, thì server sẽ trả ra một giao d
   	<location>/handle</location>
 </error-page>
 ```
-Khi gặp mã lỗi 404, server sẽ trả về trang có urlPatterns là "/handle"
+Khi gặp mã lỗi 404, server sẽ trả về trang có urlPatterns là "/handle".
+
+# JSP
+
+* JavaServlet Pages (JSP) công nghệ viết web động
+* Sử dụng thẻ <% ... %> để viết code Java trong văn bản HTML
+* JSP viết trên nền Java Servlet
+* Giúp developer dễ dàng code và tích hợp nhiều modules
+
+## Sử dụng
+
+* <%...code Java...%> trong file jsp để chèn code Java vào trong HTML
+* Code Java sẽ chạy trước để tạp ra kết quả kết hợp với code HTML của trang JSP
+* <%=...expression Java...%> in ra giá trị trong Java thành HTML
+* <%!...Khai báo Java...%> ít dùng
+* <%--...Comment Java...%>
+* Directives ảnh hưởng đến toàn cấu trúc của Servlet
+* <%@include...%> bao gồm một ifle jsp khác
+* <%@tablib...%> thêm một bộ thư viện vào file jsp cho việc sử dụng
+* jsp:include bao gồm nội dung một file jsp khác
+
+## Implicit Object
+
+* request: là HttpServletRequest
+* response: là HttpServletResponse
+* out: là PrintWriter
+* session: là HttpSession
+* application: là ServletContext
+* config: là ServletConfig
+
+## Ví dụ Hello World
+
+File Hello.jsp lưu tại folder webapp
+
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>Hello Boss!</p>
+	
+	<% 
+		int x = 10;
+		int y = 15;
+		int z = x + y;
+	%>
+	
+	<h1><%= z %></h1>
+</body>
+</html>
+```
+
+Cấu hình welcome-file thành file Hello.jsp tại web.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>HelloJSP</display-name>
+  <welcome-file-list>
+    <welcome-file>Hello.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+```
+
+## JSP Request
+
+<% request.getParameter("id") %>
+
+Example : Get param id từ url
+
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Name: Ta Minh Huy</h1>
+	<h2>Age: 19</h2>
+	<h2>Sex: Male</h2>
+	
+	<% int id = Integer.valueOf(request.getParameter("id")); %>
+	
+	<p>Id cua ban la <%= id %></p>
+	
+</body>
+</html>
+```
+
+## JSP Response
+
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	response.sendRedirect("/HelloJSP/Hello.jsp");
+%>
+```
+
+## JSP Form
+
+Ví dụ phần này sẽ có 2 file JSP, 1 file addUser.jsp (Gửi form) và 1 file viewUser.jsp (Nhận form)
+
+addUser.jsp:
+
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Them nguoi dung moi</h1>
+<form action="viewUser.jsp" method="post">
+	<input name="name" type="text" placeholder="Ten nguoi dung"/>
+	<input name="password" type="password" placeholder="Mat khau"/>
+	<input name="phone" type="text" placeholder="So dien thoai"/>
+	<textarea rows="3" cols="3" name="about" placeholder="Gioi thieu"></textarea>
+	<input name="favourites1" type="checkbox" value="Xem phim"/>
+	<input name="favourites2" type="checkbox" value="Nghe nhac"/>
+	
+	<input type="submit" value="Add" />
+</form>
+
+</body>
+</html>
+```
+
+viewUser.jsp
+
+```html
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<% 
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		String phone = request.getParameter("phone");
+		String favourites1 = request.getParameter("favourites1");
+		String favourites2 = request.getParameter("favourites2");
+	%>
+	
+	<table>
+		<tr>
+			<td>Ten</td> <td><%= name %></td>
+		</tr>
+		<tr>
+			<td>Mat khau</td> <td><%= password %></td>
+		</tr>
+		<tr>
+			<td>So dien thoai</td> <td><%= phone %></td>
+		</tr>
+		<tr>
+			<td>Xem phim</td> <td><%= favourites1 %></td>
+		</tr>
+		<tr>
+			<td>Nghe nhac</td> <td><%= favourites2 %></td>
+		</tr>
+	</table>
+</body>
+</html>
+```
