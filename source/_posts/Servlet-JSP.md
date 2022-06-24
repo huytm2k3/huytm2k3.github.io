@@ -917,3 +917,6 @@ viewUser.jsp
 </body>
 </html>
 ```
+## JSP Session
+
+## JSP Cookies
