@@ -86,11 +86,14 @@ var vueInstance = new Vue({
 
 Khi ràng buộc dữ liệu vào thuộc tính của thẻ, không được dùng trực tiếp như href="{{url}}", mà phải dùng v-bind:
 ```html
-<a v-bind:href="url"></a>
+<a v-bind:href="url">{{}}</a>
 ```
 
 Chỉ sử dụng được các toán tử đơn giản trong Template Syntax.
-Không sử dụng được khai báo biến, flow control, phải sử dụng toán tử 3 ngôi ( {{ true ? 'OK' : 'Not OK' }} )
+Không sử dụng được khai báo biến, flow control, phải sử dụng toán tử 3 ngôi 
+```js
+( {{ true ? 'OK' : 'Not OK' }} )
+```
 
 ### Event Handling
 
