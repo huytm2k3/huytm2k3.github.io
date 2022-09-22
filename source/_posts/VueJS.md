@@ -113,5 +113,14 @@ var vueInstance = new Vue({
 
 ### Two way binding
 
+Thay vì sử dụng việc ràng buộc 2 chiều phức tạp như trong React, Angular bằng cách e.target.value thì trong VueJS chúng ta có v-model
+
 https://www.youtube.com/watch?v=7fKenz7ozj4&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=10
 
+### Ràng buộc class
+
+Vì multi-class luôn cách nhau bởi dấu cách, vậy nếu v-on:class cộng chuỗi thì không hề dễ nhìn chút nào.
+
+VueJS hỗ trợ class Object
+
+https://www.youtube.com/watch?v=8BHDy7Kb8eQ&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=11
