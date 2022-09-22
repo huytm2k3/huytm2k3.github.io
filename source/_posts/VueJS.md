@@ -1,0 +1,117 @@
+---
+title: VueJS
+date: 2022-09-22 13:39:32
+tags: [front-end, vuejs]
+---
+
+## VueJS là gì?
+
+VueJS được phát triển bởi một nhân viên cũ của Google. Tài trợ bởi Laravel
+Có những khái niệm giống với React, có một số tính năng giống với Angular1
+VueJS có thể tích hợp được bất kì trang web nào (Có thể sử dụng vào 1 phần nhỏ của trang web)
+
+## Single-Page Application
+
+Cái này giống trong React, chuyển trang chỉ cần load những component cần thiết.
+
+## Môi trường lập trình
+
+- Visual Studio Code
+- NodeJS
+- NPM
+- Github
+
+## Getting Started
+
+### Cài đặt
+### Vue Instance
+#### Data
+Javascript:
+```js
+var vueInstance = new Vue({
+    el: '#app', // Element selector
+    data: {
+        title: 'Điện thoại Samsung'
+    }
+})
+
+console.log(vueInstance);
+```
+Html code Template syntax:
+```html
+<div id="app">
+    <p>{{title}}</p>
+</div>
+```
+
+Hệ thống Reactivity: Khi title thay đổi, các element có title sẽ được reload
+
+```js
+vueInstance.title = 'Dien thoai Oppo'
+```
+
+#### Methods
+```js
+var vueInstance = new Vue({
+    el: '#app' , // Element selector
+    methods: {
+        say: function(text){
+            return 'Hello ' + text;
+        }
+    }
+})
+```
+
+```html
+<div id="app">
+    <p>{{say('World')}}</p>
+</div>
+```
+Dùng this để chỉ chính nó. Ví dụ muốn lấy title trong methods của Vue Instance
+```js
+var vueInstance = new Vue({
+    el: '#app' , // Element selector
+    data: {
+        title: 'Tieu de 1'
+    },
+    methods: {
+        say: function(text){
+            console.log(this.title)
+        }
+    }
+})
+```
+
+### Data Binding
+
+Khi ràng buộc dữ liệu vào thuộc tính của thẻ, không được dùng trực tiếp như href="{{url}}", mà phải dùng v-bind:
+```html
+<a v-bind:href="url"></a>
+```
+
+Chỉ sử dụng được các toán tử đơn giản trong Template Syntax.
+Không sử dụng được khai báo biến, flow control, phải sử dụng toán tử 3 ngôi ( {{ true ? 'OK' : 'Not OK' }} )
+
+### Event Handling
+
+Thay vì onclick trong Html, Vue sử dụng v-on:click
+
+```html
+<div id="app">
+    <button v-on:click="counter += 1">Add 1</button>
+    <p>{{counter}}</p>
+</div>
+```
+```js
+var vueInstance = new Vue({
+    el: '#app' , // Element selector
+    data: {
+        counter: 0
+    }
+})
+```
+
+### Two way binding
+
+https://www.youtube.com/watch?v=7fKenz7ozj4&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=10
+
