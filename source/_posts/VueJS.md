@@ -127,3 +127,28 @@ Vì multi-class luôn cách nhau bởi dấu cách, vậy nếu v-on:class cộn
 VueJS hỗ trợ class Object
 
 https://www.youtube.com/watch?v=8BHDy7Kb8eQ&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=11
+
+### Render Template với biểu thức điều kiện
+
+https://www.youtube.com/watch?v=xZrioi3zOP4&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=13
+
+### Render Template với loop
+
+https://www.youtube.com/watch?v=bCOcZ_BMaJU&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=14
+
+### Render Template với ngoài loop trong condition 
+
+https://www.youtube.com/watch?v=gd-9xTlT6b4&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=15
+
+### Lưu ý quan trọng về Array và Object trong VueJS
+
+- So sánh "===" trong JS là so sánh địa chỉ, không phải so sánh phần tử
+- Thay đổi, thêm phần tử vào array hoặc object bằng index thì Reactivity của Vue không hoạt động, cần sử dụng hàm có sẵn của VueJS
+
+```js
+app.$set(p1, p2)
+app.$set(p1, p2, p3)
+```
+
+
+https://www.youtube.com/watch?v=h7ReovfFZYA&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=17
