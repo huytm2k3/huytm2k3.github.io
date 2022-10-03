@@ -24,3 +24,36 @@ Mã hóa ký tự
 Mã hóa ứng dụng
 Kết hợp với Tầng ứng dụng
 - Tầng ứng dụng (Application layer):
+
+# WAN Termination
+
+
+## Demarcation point
+
+Điểm phân chia ranh giới kết nối của bạn với thế giới bên ngoài
+
+- WAN provider
+- Nhà cung cấp dịch vụ Internet
+- Demarc
+
+Sử dụng ở mọi nơi
+
+- Ở nhà
+
+Vị trí trung tâm của 1 toà nhà
+
+RJ-45 connection
+
+## Smartjack
+
+NIU (Network interface unit)
+
+- Thiết bị xác định ranh giới
+- Thiết bị giao diện mạng, giao diện mạng điện thoại
+
+Smartjack
+
+Chẩn đoán tích hợp
+
+- Loopback tests
+
