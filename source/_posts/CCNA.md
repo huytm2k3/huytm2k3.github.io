@@ -123,6 +123,7 @@ TCP gửi từng Segment, khi client gửi lại ACK, TCP mới gửi Segment ti
 
 #### 5. Session
 
+
 Chia tài nguyên card mạng, cho phép nhiều ứng dụng truy cập mạng cùng 1 máy.
 
 #### 6. Presentation
