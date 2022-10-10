@@ -25,3 +25,5 @@ exiftool <ten_file_anh> # Xem chi tiết file ảnh (License có thể decode)
 
 - Một số file hình ảnh chứa những thuộc tính (License, ..) mã base, decode sẽ được flag.
 - Một số file zip được ẩn giấu dưới dạng file hình ảnh, nên ta có thể unzip để xem những file ẩn trong nó.
+- exiftool có thể tìm được loại tệp tin ban đầu khi nó được đổi tên không xác định.
+- Flag có thể được giấu ở hex format - Mở hình ảnh bằng Hex Editor
