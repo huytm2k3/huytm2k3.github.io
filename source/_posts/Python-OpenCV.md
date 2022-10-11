@@ -169,3 +169,4 @@ https://docs.opencv.org/4.x/d3/df2/tutorial_py_basic_ops.html:
 - Tách và hợp nhất hình ảnh
 - Tạo viền cho hình ảnh
 
+
