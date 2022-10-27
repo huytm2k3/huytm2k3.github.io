@@ -160,6 +160,52 @@ Mô hình TCP/IP có 4 phân lớp:
 
 Trên hệ thống mạng Ethernet/Lan, mỗi thiết bị được định danh bằng địa chỉ MAC, mỗi card mạng sở hữu 1 địa chỉ MAC. Địa chỉ MAC là duy nhất trên toàn thế giới.
 
+![](/images/CCNAPost/Screenshot_9.png)
+
+Trước đây, các thiết bị giao tiếp hoàn toàn bằng MAC.
+
+## Kích thước tối đa của một Segment
+
+![](/images/CCNAPost/Screenshot_10.png)
+
+## Cơ chế hoạt động của UDP và TCP
+
+TCP trải qua quá trình bắt tay 3 bước mới tiếp tục truyền dữ liệu, gửi từng Segment và đợi phản hồi ACK mới truyền tiếp nên có khả năng phục hồi dữ ljeieu
+UDP không có khả năng phục hồi dữ liệu - gửi dữ liệu một cách ồ ạt.
+
+## Cơ chế điều khiển luồng Flow Control trong giao thức UDP
+
+## Xác định địa chỉ MAC của máy tính sử dụng HĐH Windows
+
+### Cách 1
+
+Bước 1: Windows + R, Gõ ncpa.cpl -> Enter
+Bước 2: Chuột phải Ethernet, chọn Status
+Bước 3: Địa chỉ MAC là hàng Physical address
+
+### Cách 2
+
+Mở Command line, gõ ipconfig /all
+
+## Phân tích quá trình trao đổi dữ liệu giữa các thiết bị trong hệ thống mạng LAN
+
+![](/images/CCNAPost/Screenshot_11.png)
+
+## Cơ chế chuyển mạch Ethernet Switch
+
+Chức năng chính của Switch là chuyển mạch: Quá trình nhận Frame, đẩy Frame qua port khác.
+
+Dựa vào bảng chuyển mạch MAC table.
+
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/K8PCqhgLywk?list=PLhchcQ1p5Tc9_LOTMsjK_Mk2xZZR1VChu" title="Bài18: Cơ chế chuyển mạch Ethernet Switch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Các kiểu truyền thông trên hệ thống mạng LAN
+
+![](/images/CCNAPost/Screenshot_12.png)
+
+
+
+
 
 
 
