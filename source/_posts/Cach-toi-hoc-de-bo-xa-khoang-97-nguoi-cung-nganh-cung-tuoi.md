@@ -70,6 +70,7 @@ Tới giờ thì mình không chỉ tập trung vào Software, vào phát triể
 
 ## Summary
 
-Túm cái váy lại thì, chăm, tập trung, hiệu quả.
+Cơ hội việc làm thì nhiều đấy, nhưng đội quân sinh viên CNTT ra trường còn nhiều hơn. Nếu mình không hơn người thì có bao nhiêu phần trăm là được nhận? Không như những ngành kinh tế, ngoại ngữ, mấy ngành kĩ thuật này khá là khô khan, nên phần lớn là chẳng giỏi ăn nói, không có điểm gì đặc biệt thì phải giỏi... Tôi có nói quá nhiều về CNTT, nhưng những ngành còn lại cũng khá tương tự thôi. Giả sử với ĐTVT hay HTTT thì cũng có lập trình nhúng, hoặc kĩ sư 2 ngành đó đi làm trái ngành CNTT là điều rất đỗi bình thường. Với ATTT, Vnhacker nói rằng "Lập trình, lập trình và lập trình. Thứ gì quan trọng nói 3 lần", nghĩa là - giỏi ATTT thì phải giỏi CNTT.
 
+Túm cái váy lại thì, chăm, tập trung, hiệu quả, thông minh nó chỉ quyết định được 1 phần thôi.
 
