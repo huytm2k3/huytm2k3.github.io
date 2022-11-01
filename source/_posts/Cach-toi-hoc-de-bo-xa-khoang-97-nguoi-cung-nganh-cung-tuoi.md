@@ -50,7 +50,7 @@ Chính xác thứ đó gọi là tư duy lập trình, là kinh nghiệm, là c�
 
 Có nghĩa là, càng học càng cách xa, là nhanh dần đều, có gia tốc.
 
-## IT Software Mindmap của mình
+## IT Software Roadmap của mình
 
 1. 2 tuần python
 2. 1 tháng C/C++
@@ -62,7 +62,7 @@ Có nghĩa là, càng học càng cách xa, là nhanh dần đều, có gia tố
 8. Terminal, Linux,...
 9. Còn nhiều thứ nữa chả nhớ
 
-Đây là Mindmap hồi còn chưa biết gì của mình.
+Đây là Roadmap hồi còn chưa biết gì của mình.
 
 Mình không học phần core quá nhiều, mình thường học qua project thực tế, sản phẩm mình làm ra nhiều hơn.
 
