@@ -203,6 +203,41 @@ Dựa vào bảng chuyển mạch MAC table.
 
 ![](/images/CCNAPost/Screenshot_12.png)
 
+## Cơ chế hoạt động của giao thức ARP phân giải địa chỉ IP thành địa chỉ MAC
+
+Máy tính sử dụng ARP phân giải địa chỉ IP đích thành địa chỉ MAC tương ứng
+
+Ví dụ, khi truyền dữ liệu từ PcA sang PcB, A không thể biết được MAC của B, nhưng từ địa chỉ IP của B, A có thể phân giải ra địa chỉ MAC tương ứng.
+
+Khi này A sẽ soạn thảo bản tin ARP Request với MAC nguồn A và MAC đích là MAC POSTCARD, nó sẽ hỏi thông tin trong mạng là ai mang địa chỉ IP này, thì trả lại MAC cho A.
+
+## Phân tích quá trình trao đổi dữ liệu giữa các phân vùng mạng LAN
+
+Nếu cấu trúc Package có ý nghĩa trên toàn cầu, thì cấu trúc LAN chỉ có ý nghĩa trên từng phân vùng mạng.
+
+![](/images/CCNAPost/Screenshot_13.png)
+
+Nếu PcA muốn gửi gói tin tới B, PC A phải gửi gói tin tới Switch 1.
+Đối với địa chỉ MAC R, gói tin sẽ đẩy qua port F0/4.
+Router R1 đọc tiếp IP, muốn đẩy IP 20.0.0.0/24, phải đẩy qua port F0/2.
+Trước khi gói tin gửi đi, nó xóa thông tin MAC nguồn MAC đích cũ, thêm MAC nguồn đích mới.
+
+## Tìm hiểu cấu trúc địa chỉ MAC
+
+Cấu trúc mạng LAN: 
+![](/images/CCNAPost/Screenshot_14.png)
+
+6 số HEXA đầu tiên trong địa chỉ MAC có thể tìm được ra nhà mạng sản xuất ra Card mạng đó thông qua trang web: aruljohn
+
+## Công nghệ Ethernet LAN: Broadcast Domain
+
+Bất kì thiết bị nào gửi Broadcast, tất cả các thiết bị đều nhận được lưu lượng Broadcast
+
+Nếu trong cùng Broadcast Domain, mà 2 lớp mạng khác nhau. Có nguy cơ các thiết bị không thể giao tiếp được với nhau.
+
+
+
+
 
 
 
