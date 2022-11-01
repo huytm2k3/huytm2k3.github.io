@@ -1,5 +1,5 @@
 ---
-title: Cách tôi học để bỏ xa khoảng 97% người cùng ngành, cùng tuổi...
+title: Cách tôi học để bỏ xa khoảng 95% người cùng ngành, cùng tuổi...
 date: 2022-11-01 11:26:26
 tags:
 ---
