@@ -235,13 +235,34 @@ Bất kì thiết bị nào gửi Broadcast, tất cả các thiết bị đều
 
 Nếu trong cùng Broadcast Domain, mà 2 lớp mạng khác nhau. Có nguy cơ các thiết bị không thể giao tiếp được với nhau.
 
+## Haft Duplex và Full Duplex trên Ethernet LAN
 
+![](/images/CCNAPost/Screenshot_15.png)
 
+Switch sau khi nhận được gói tin, sẽ phân tích địa chỉ MAC và gửi gói tin tới máy nhận
 
+Hub xử lý tín hiệu 0101 trên môi trường truyền, khuếch đại tín hiệu trên tất cả các PORT => Giảm Perfomance, bảo mật.
 
+![](/images/CCNAPost/Screenshot_16.png)
 
+Đối với các thiết bị sử dụng Switch kết nối, chúng có thể truyền thông ở chế độ Full Duplex, tức là có thể đồng thời vừa truyền vừa nhận.
 
+Đối với các thiết bị sử dụng Hub kết nối, chúng chỉ có thể truyền thông ở chế độ Half Duplex, chỉ có thể truyền dữ liệu, thiết bị này truyền thì thiết bị khác không thể truyền được nữa.
 
+## Collision domain
 
+![](/images/CCNAPost/Screenshot_17.png)
+
+Khi 2 thiết bị truyền dữ liệu đồng thời thông qua Hub, sẽ gây ra hiện tượng Collision
+
+Để tránh Collision domain, nên sử dụng switch, hoặc PC sẽ lắng nghe môi trường, sử dụng cơ chế Timer
+
+## Xác định số lượng Collision Domain và Broadcast Domain trên mạng LAN
+
+![](/images/CCNAPost/Screenshot_18.png)
+
+Ở hình trên, chúng ta có 3 port của switch, tương ứng với 3 Collision Domain
+
+![](/images/CCNAPost/Screenshot_19.png)
 
 

@@ -140,6 +140,19 @@ https://www.youtube.com/watch?v=p1q39gPvDAI&list=PL33lvabfss1z8GYxjyMulCnhcYGk5a
 
 Có thể dùng lại các component với content khác nhau.
 
+## Một chút lưu ý với Static file
+
+```python
+
+STATIC_ROOT = ""
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = (
+	os.path.join(os.path.dirname(__file__),'..\\home\\static\\'),
+)
+
+```
+Sửa mãi mới được =)))
 
 
 

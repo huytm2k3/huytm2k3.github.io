@@ -42,6 +42,10 @@ Note mục tiêu học tập, note deadline lại. Vẽ ra kế hoạch học t�
 
 Giảm học, tăng làm. Đừng nghĩ, hãy làm. Đừng đặt mục tiêu là tháng này mình phải học React, phải biết code Python, hãy nghĩ là, mình phải làm được trang web này bằng React, phải viết được tool kia bằng Python. Vì đơn giản như công ty, họ không cần biết kiến thức của bạn tới đâu, họ chỉ cần bạn làm được sản phẩm cho họ, phỏng vấn cũng chỉ là sơ kiểm.
 
+## Thay đổi thói quen sinh hoạt
+
+Hmm, 23h30 ngủ và 6h30 dậy, 1 tiếng ngủ trưa. 8 tiếng đồng hồ cho việc ngủ là quá đủ.
+
 ## Quan trọng của việc học sớm là gì?
 
 Ngành này chăm chỉ, thực sự giúp biến đổi về chất. Họ là sinh viên năm 2, họ dành ra 1 tháng để tìm hiểu về React, mình không biết gì về Vue, mình có thể vừa tìm hiểu và làm ra một trang web sử dụng VueJS trong 1 tuần.
@@ -68,9 +72,24 @@ Mình không học phần core quá nhiều, mình thường học qua project t
 
 Tới giờ thì mình không chỉ tập trung vào Software, vào phát triển phần mềm nữa. Mà còn tìm hiểu thêm về AI, về Machine Learning, về kiến trúc máy tính, về CTF, bảo mật,...
 
+## Thành tích mà mình đạt được trong hơn 1 năm qua
+
+- Không tính là thành thạo nhưng mình nắm vững được khoảng 8 ngôn ngữ lập trình như: JavaScript, Java, Kotlin, C, C++, Python, Pascal, PHP.
+
+- Làm việc với khoảng 10 tới 15 Framework như JavaScript thì có ReactJS, VueJS, ExpressJS; Java có Java Spring Boot; Python có Django, Flask;
+C++ có QT App Framework;.v.v..
+
+- Tiếp xúc với nhiều thư viện lớn nhỏ, Open Source, Tools... khong nhớ hết mà kể.
+
+- Từng làm chung, riêng và lưu trong Github khoảng 14 Project nhỏ, được tiếp xúc với Remote linux server, Deploy website, nginx.
+
+- Có 2 tháng thực tập từ xa cho công ty.
+
+- Hiện tại mình đang dành 1 nửa thời gian cho Software Development và 1 nửa cho CCNA, CTF, Kali Linux,... và chưa tham gia cuộc thi nào =))
+
+
 ## Summary
 
 Cơ hội việc làm thì nhiều đấy, nhưng đội quân sinh viên CNTT ra trường còn nhiều hơn. Nếu mình không hơn người thì có bao nhiêu phần trăm là được nhận? Không như những ngành kinh tế, ngoại ngữ, mấy ngành kĩ thuật này khá là khô khan, nên phần lớn là chẳng giỏi ăn nói, không có điểm gì đặc biệt thì phải giỏi... Mình có nói quá nhiều về CNTT, nhưng những ngành còn lại cũng khá tương tự thôi. Giả sử với ĐTVT hay HTTT thì cũng có lập trình nhúng, hoặc kĩ sư 2 ngành đó đi làm trái ngành CNTT là điều rất đỗi bình thường. Với ATTT, Vnhacker nói rằng "Lập trình, lập trình và lập trình. Thứ gì quan trọng nói 3 lần", nghĩa là - giỏi ATTT thì phải giỏi CNTT.
 
 Túm cái váy lại thì, chăm, tập trung, hiệu quả, thông minh nó chỉ quyết định được 1 phần thôi.
-
