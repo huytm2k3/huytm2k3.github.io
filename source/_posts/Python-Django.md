@@ -155,4 +155,16 @@ STATICFILES_DIRS = (
 Sửa mãi mới được =)))
 
 
+## Url Params
 
+```python
+urlpattern = [
+    path('int:id/', views.post)
+]
+```
+Nhận params:
+```python
+def post(request, id):
+    post = Post.objects.get(id=id)
+    return render(request...)
+```

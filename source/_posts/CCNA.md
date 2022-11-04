@@ -265,4 +265,22 @@ Khi 2 thiết bị truyền dữ liệu đồng thời thông qua Hub, sẽ gây
 
 ![](/images/CCNAPost/Screenshot_19.png)
 
+## Cấu trúc địa chỉ IPv4
+
+IPv4 có 32 bit nhị phân, để dễ nhớ người ta thường đổi thành hệ cơ số 10. Người ta sẽ chia nhỏ địa chỉ IP thành 4 phần, đổi cơ số từng phần và đặt dấu chấm ở giữa.
+
+## Các lớp của địa chỉ IPv4
+
+![](/images/CCNAPost/Screenshot_20.png)
+
+## Đổi từ Prefix Length thành Subnet Mask
+
+Nếu Prefix-Length bằng 24, chúng ta viết 24 số 1, còn lại là 0.
+
+Đổi thành thập phân mỗi 8 bit
+
+![](/images/CCNAPost/Screenshot_21.png)
+
+
+
 
