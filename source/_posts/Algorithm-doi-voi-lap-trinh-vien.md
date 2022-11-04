@@ -4,7 +4,7 @@ date: 2022-11-04 17:20:21
 tags:
 ---
 
-Mình mới lướt Facebook và tìm được một bài viết khá hay nói về tư tưởng của mọi người đối với nghề lập trình viên của PSG. TS. Nguyễn Ái Việt nên lưu vào đây đọc sau.
+Mình mới lướt Facebook và tìm được một bài viết khá hay nói về suy nghĩ của mọi người đối với nghề lập trình viên, bài này của PSG. TS. Nguyễn Ái Việt nên lưu vào đây đọc sau.
 
 Algorithm đối với lập trình viên
 Ở Việt Nam, có hai nhận thức sai lầm và trái ngược về lập trình viên. Do đó cũng đã hình thành hai loại lập trình viên như vậy, và lấn át các lập trình viên thực thụ, nếu thảng hoặc có họ.
