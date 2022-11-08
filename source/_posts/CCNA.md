@@ -281,6 +281,10 @@ Nếu Prefix-Length bằng 24, chúng ta viết 24 số 1, còn lại là 0.
 
 ![](/images/CCNAPost/Screenshot_21.png)
 
+## Chuyển đổi Octet của IPv4 từ thập phân sang nhị phân
+
+https://www.youtube.com/watch?v=rz3bae9FOvE&list=PLhchcQ1p5Tc9_LOTMsjK_Mk2xZZR1VChu&index=32
+
 
 
 

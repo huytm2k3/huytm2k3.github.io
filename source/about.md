@@ -4,7 +4,7 @@ date: 2022-04-25 09:21:17
 ---
 ## Giới thiệu
 
-Xin chào, mình là Tạ Minh Huy. Trang web này được viết ra dựa trên Blog framework Hexo thông qua platform NodeJS
+Xin chào, mình là Tạ Minh Huy. Trang web này được viết ra dựa trên Blog framework Hexo thông qua JavaScript Runtime NodeJS
 
 ## Mục đích
 
