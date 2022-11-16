@@ -286,5 +286,9 @@ Nếu Prefix-Length bằng 24, chúng ta viết 24 số 1, còn lại là 0.
 https://www.youtube.com/watch?v=rz3bae9FOvE&list=PLhchcQ1p5Tc9_LOTMsjK_Mk2xZZR1VChu&index=32
 
 
+![](/images/CCNAPost/Screenshot_23.png)
+![](/images/CCNAPost/Screenshot_24.png)
+![](/images/CCNAPost/Screenshot_25.png)
+![](/images/CCNAPost/Screenshot_23.png)
 
 
