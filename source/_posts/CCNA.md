@@ -291,4 +291,14 @@ https://www.youtube.com/watch?v=rz3bae9FOvE&list=PLhchcQ1p5Tc9_LOTMsjK_Mk2xZZR1V
 ![](/images/CCNAPost/Screenshot_25.png)
 ![](/images/CCNAPost/Screenshot_23.png)
 
+## Public IP vs Private IP
+
+- Kĩ thuật NAS
+- Public IP cần phải thuê
+- Private không tốn chi phí (Nội bộ)
+
+## Cài đặt IPv4 cho Windows
+
+https://www.youtube.com/watch?v=8E4syQWpIBA&list=PLhchcQ1p5Tc9_LOTMsjK_Mk2xZZR1VChu&index=38
+
 
