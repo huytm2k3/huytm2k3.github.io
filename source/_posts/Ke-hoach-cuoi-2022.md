@@ -10,8 +10,8 @@ tags:
 - Ôn kĩ lý thuyết căn bản NodeJS phục vụ cho phỏng vấn đầu 2023
 - Xem kĩ lại kĩ thuật truy vấn Query SQL, viết bài:
     - Truy vấn cơ bản (Done: http://huytm2k3.github.io/2022/11/22/SQL-Truy-van-co-ban/)
-    - Generate Scripts
-    - Hàm kết hợp, gom nhóm và truy vấn lồng
+    - Generate Scripts (Phần này giống với sao chép dữ liệu từ DB sang cho máy khác, mỗi một DB có 1 cách khác nhau nên không ghi lại tài liệu)
+    - Hàm kết hợp, gom nhóm và truy vấn lồng 
     - Truy vấn lồng nâng cao, câu điều kiện, vòng lặp SQL
 
 - Tham khảo các mô hình SQL trên mạng

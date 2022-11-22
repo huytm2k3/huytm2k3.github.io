@@ -111,6 +111,14 @@ INSERT INTO SinhVien (MSSV, HOTEN) VALUES ('001', 'Ta Minh Huy')
 
 ![](/images/SQLPost/Screenshot_1.png)
 
+Cập nhật dữ liệu cho 1 hàng
+
+```sql
+UPDATE <tenbang>
+SET <...>
+WHERE <dieukien>
+```
+
 Hiển thị dữ liệu 1 bảng:
 
 ```sql
