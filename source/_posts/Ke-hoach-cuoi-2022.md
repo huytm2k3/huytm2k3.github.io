@@ -8,7 +8,12 @@ tags:
 
 - Một ngày ít nhất 5h học
 - Ôn kĩ lý thuyết căn bản NodeJS phục vụ cho phỏng vấn đầu 2023
-- Xem kĩ lại kĩ thuật truy vấn Query SQL
+- Xem kĩ lại kĩ thuật truy vấn Query SQL:
+    - Truy vấn cơ bản (Done )
+    - Generate Scripts
+    - Hàm kết hợp, gom nhóm và truy vấn lồng
+    - Truy vấn lồng nâng cao, câu điều kiện, vòng lặp SQL
+
 - Tham khảo các mô hình SQL trên mạng
 - Xây dựng một website lưu trữ hợp âm guitar sử dụng thuần Database mà không dùng opensource Strapi
 - Học JWT, làm đăng nhập - đăng kí cho trang hợp âm guitar sử dụng JWT
