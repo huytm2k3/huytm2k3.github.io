@@ -1,5 +1,5 @@
 ---
-title: Truy vấn SQL
+title: SQL - Truy vấn cơ bản
 date: 2022-11-22 06:48:44
 tags:
 ---

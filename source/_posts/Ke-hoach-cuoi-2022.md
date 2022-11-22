@@ -1,6 +1,6 @@
 ---
 title: Kế hoạch cuối 2022 - Đầu 2023
-date: 2022-11-21 10:22:59
+date: 2022-11-30 10:22:59
 tags:
 ---
 
@@ -9,7 +9,7 @@ tags:
 - Một ngày ít nhất 5h học
 - Ôn kĩ lý thuyết căn bản NodeJS phục vụ cho phỏng vấn đầu 2023
 - Xem kĩ lại kĩ thuật truy vấn Query SQL:
-    - Truy vấn cơ bản (Done )
+    - Truy vấn cơ bản (Done: http://huytm2k3.github.io/2022/11/22/SQL-Truy-van-co-ban/)
     - Generate Scripts
     - Hàm kết hợp, gom nhóm và truy vấn lồng
     - Truy vấn lồng nâng cao, câu điều kiện, vòng lặp SQL
