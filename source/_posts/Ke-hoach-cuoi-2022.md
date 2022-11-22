@@ -8,7 +8,7 @@ tags:
 
 - Một ngày ít nhất 5h học
 - Ôn kĩ lý thuyết căn bản NodeJS phục vụ cho phỏng vấn đầu 2023
-- Xem kĩ lại kĩ thuật truy vấn Query SQL:
+- Xem kĩ lại kĩ thuật truy vấn Query SQL, viết bài:
     - Truy vấn cơ bản (Done: http://huytm2k3.github.io/2022/11/22/SQL-Truy-van-co-ban/)
     - Generate Scripts
     - Hàm kết hợp, gom nhóm và truy vấn lồng
