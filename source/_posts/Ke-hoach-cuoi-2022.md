@@ -37,6 +37,12 @@ tags:
 
 - Theo chân công ty, thu nhập ổn định khi vừa tốt nghiệp, trong thời gian làm việc thì tìm hiểu về An ninh an toàn mạng + sở thích bản thân, sau đấy có rẽ hướng cũng dễ.
 
+## Tiến độ trang Guitar Ký sự
+
+- Hoàn thành phần thiết kế cơ sở dữ liệu
+- Dựng xong Base trang web với ExpressJS, EJS
+- Kết nối thành công DB PostgreSQL
+
 
 
 KHÔNG LÀM ĐƯỢC BỎ NGÀNH
