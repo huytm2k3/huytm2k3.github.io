@@ -12,7 +12,7 @@ tags:
     - Truy vấn cơ bản (Done: http://huytm2k3.github.io/2022/11/22/SQL-Truy-van-co-ban/)
     - Phân tích ERD, Lược đồ quan hệ (Done: http://huytm2k3.github.io/2022/11/22/SQL-Phan-tich-ERD-Luoc-do-quan-he/)
     - Generate Scripts (Phần này giống với sao chép dữ liệu từ DB sang cho máy khác, mỗi một DB có 1 cách khác nhau nên không ghi lại tài liệu)
-    - Hàm kết hợp, gom nhóm và truy vấn lồng (http://huytm2k3.github.io/2022/11/22/SQL-Ham-ket-hop-gom-nhom-va-truy-van-long/)
+    - Hàm kết hợp, gom nhóm và truy vấn lồng (Done: http://huytm2k3.github.io/2022/11/22/SQL-Ham-ket-hop-gom-nhom-va-truy-van-long/)
     - Truy vấn lồng nâng cao, câu điều kiện, vòng lặp SQL
 
 - Tham khảo các mô hình SQL trên mạng
