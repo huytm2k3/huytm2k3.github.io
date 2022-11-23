@@ -40,9 +40,12 @@ tags:
 
 ## Tiến độ trang Guitar Ký sự
 
+http://guitarkysu.tlgeo.xyz
+
 - Hoàn thành phần thiết kế cơ sở dữ liệu
 - Dựng xong Base trang web với ExpressJS, EJS
 - Kết nối thành công DB PostgreSQL
+- Làm đẹp header, trang index
 
 
 
