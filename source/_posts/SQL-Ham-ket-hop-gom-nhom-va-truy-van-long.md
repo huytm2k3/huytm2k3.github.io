@@ -97,3 +97,30 @@ INSERT INTO CloneGV
 SELECT * FROM GIAOVIEN
 
 ```
+
+## Truy vấn lồng
+
+Nếu ta có 1 table như này:
+
+![](/images/SQLAdvPost/Screenshot_1.png)
+
+Để kiểm tra GV001 có nằm trong danh sách GVQLCM hay không, chúng ta dùng truy vấn lồng. Nếu GV 001 nằm trong danh sách GVQLCM, in ra thông tin GV 001
+
+```sql
+SELECT * FROM GIAOVIEN
+WHERE MAGV = '001'
+AND MAGV IN
+(
+    SELECT GVQLCM FROM GIAOVIEN
+)
+```
+
+Truy vấn lồng trong form
+
+```sql
+SELECT * FROM
+GIAOVIEN, (SELECT * FROM DETAI) AS DT
+-- ...
+```
+
+
