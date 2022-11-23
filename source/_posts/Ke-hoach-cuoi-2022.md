@@ -16,7 +16,8 @@ tags:
     - Truy vấn lồng nâng cao, câu điều kiện, vòng lặp SQL
 
 - Tham khảo các mô hình SQL trên mạng
-- Xây dựng một website lưu trữ hợp âm guitar sử dụng thuần Database mà không dùng opensource Strapi
+- Học bootstrap
+- Xây dựng một website lưu trữ hợp âm guitar sử dụng thuần Database mà không dùng opensource Strapi, sử dụng bootstrap
 - Học JWT, làm đăng nhập - đăng kí cho trang hợp âm guitar sử dụng JWT
 - Không CCNA, không CTF, không CV, không ML, không AI - tập trung cho Software
 
