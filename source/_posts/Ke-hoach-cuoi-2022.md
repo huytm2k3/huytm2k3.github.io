@@ -16,7 +16,7 @@ tags:
     - Truy vấn lồng nâng cao, câu điều kiện, vòng lặp SQL
 
 - Tham khảo các mô hình SQL trên mạng
-- Học bootstrap
+- Học bootstrap (Done)
 - Xây dựng một website lưu trữ hợp âm guitar sử dụng thuần Database mà không dùng opensource Strapi, sử dụng bootstrap
 - Học JWT, làm đăng nhập - đăng kí cho trang hợp âm guitar sử dụng JWT
 - Không CCNA, không CTF, không CV, không ML, không AI - tập trung cho Software
@@ -46,6 +46,9 @@ http://guitarkysu.tlgeo.xyz
 - Dựng xong Base trang web với ExpressJS, EJS
 - Kết nối thành công DB PostgreSQL
 - Làm đẹp header, trang index
+- Đã mở được hợp âm, chưa có hợp âm render ra trang báo lỗi
+- Các phiên bản hợp âm khác nhau mỗi bài hát
+- Responsive siêu ổn, khỏi cần chỉnh sau này
 
 
 
