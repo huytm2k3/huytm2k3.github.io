@@ -6,8 +6,8 @@ tags:
 
 ## Kế hoạch học tập 2022
 
-- Một ngày ít nhất 5h học
-- Ôn kĩ lý thuyết căn bản NodeJS phục vụ cho phỏng vấn đầu 2023
+- Một ngày ít nhất 5h học (Đến giờ vẫn giữ lời)
+- Ôn kĩ lý thuyết căn bản NodeJS phục vụ cho phỏng vấn đầu 2023 (Giữa tháng 12)
 - Xem kĩ lại kĩ thuật truy vấn Query SQL, viết bài:
     - Truy vấn cơ bản (Done: http://huytm2k3.github.io/2022/11/22/SQL-Truy-van-co-ban/)
     - Phân tích ERD, Lược đồ quan hệ (Done: http://huytm2k3.github.io/2022/11/22/SQL-Phan-tich-ERD-Luoc-do-quan-he/)
@@ -18,7 +18,8 @@ tags:
 - Tham khảo các mô hình SQL trên mạng
 - Học bootstrap (Done)
 - Xây dựng một website lưu trữ hợp âm guitar sử dụng thuần Database mà không dùng opensource Strapi, sử dụng bootstrap
-- Học JWT, làm đăng nhập - đăng kí cho trang hợp âm guitar sử dụng JWT
+- Học JWT, làm đăng nhập - đăng kí cho trang hợp âm guitar sử dụng JWT (Done)
+- Làm luôn app GuitarKySu nền tảng Android có full chức năng như bản web
 - Không CCNA, không CTF, không CV, không ML, không AI - tập trung cho Software
 
 ## Chức năng trang Hợp âm guitar
@@ -49,10 +50,14 @@ http://guitarkysu.tlgeo.xyz
 - Đã mở được hợp âm, chưa có hợp âm render ra trang báo lỗi
 - Các phiên bản hợp âm khác nhau mỗi bài hát
 - Responsive siêu ổn, khỏi cần chỉnh sau này
-
+- Đăng nhập, đăng ký, xác thực với JWT
+- Cập nhật phần tìm kiếm gần đúng
+- Cập nhật bình luận
 
 
 KHÔNG LÀM ĐƯỢC BỎ NGÀNH
+
+Dự tính là làm trong hơn tháng, nhưng bản web có vẻ gần hoàn thiện rồi =))
 
 *recommend: cái này khó thì để sau
 
