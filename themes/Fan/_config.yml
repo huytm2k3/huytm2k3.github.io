@@ -74,7 +74,6 @@ scripts:
   - /js/fan.js
   - /js/canvas_bg.js
   - /js/utils.js
-  - /js/scroll.js
   - /js/sidebar.js
   - /js/copy.js
 
