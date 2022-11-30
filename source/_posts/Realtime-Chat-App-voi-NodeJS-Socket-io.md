@@ -4,15 +4,6 @@ date: 2022-11-30 08:18:27
 tags:
 ---
 
-<style>
-  a.post-title, p,h2, li {
-    font-family: Sans-serif;
-    line-height: 2;
-  }
-  p, li{
-    font-size: 14px;
-  }
-</style>
 
 ## Introduce
 
