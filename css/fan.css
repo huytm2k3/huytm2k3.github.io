@@ -10220,6 +10220,17 @@ li {
   padding: 0;
   border: 0;
 }
+a.post-title,
+p,
+h2,
+li {
+  font-family: Sans-serif;
+  line-height: 2;
+}
+p,
+li {
+  font-size: 14px;
+}
 article,
 aside,
 details,
