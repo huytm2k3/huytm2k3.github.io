@@ -102,3 +102,5 @@ socket.on("user-chat", (arg) => {
 ```
 
 Mô hình gửi nhận sẽ tóm gọn lại như này: 1 user sẽ gửi lên tin nhắn kèm theo socket keyword là 'on-chat', server sẽ sử dụng keyword đó để đón lấy tin nhắn và gửi lại cho tất cả các user kèm 1 keyword khác là 'user-chat', lúc này tất cả user dùng keyword 'user-chat' để lấy tin nhắn và hiển thị ra.
+
+Project cờ caro 2 người online mình làm bằng Socket.io: https://github.com/huytm2k3/carogame
