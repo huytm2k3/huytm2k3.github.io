@@ -46,12 +46,12 @@
     // 添加监听器，在title里显示状态变化
     doc.addEventListener(visibilityChange, function () {
         if (doc[state] === 'visible') {
-            doc.title = 'TaMinhHuy is dabezt👏';
+            doc.title = 'Blog của Tạ Minh Huy';
             status = setTimeout(() => {
                 doc.title = docText;
             }, 1000);
         } else {
-            doc.title = 'TaMinhHuy is dabezt';
+            doc.title = 'Blog của Tạ Minh Huy';
             if (status) {
                 clearTimeout(status);
             }
