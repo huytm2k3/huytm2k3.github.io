@@ -8,6 +8,8 @@ menu:
   categories: /categories
   Archives: /archives
   About: /about
+  Plan: /plan
+  Book: /book
 
 # Miscelaneous
 favicon: /favicon.ico
