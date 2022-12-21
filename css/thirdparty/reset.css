@@ -14,11 +14,18 @@ li {
   padding: 0;
   border: 0;
 }
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 a.post-title,
+.title,
 p,
 h2,
-li {
-  font-family: Sans-serif;
+li,
+h3,
+h4,
+h5,
+h6,
+h1 {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 2;
 }
 p,

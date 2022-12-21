@@ -751,6 +751,7 @@ body .button-hover:hover::before {
     display: none;
   }
   #menu-outer #menu-inner .menu-item {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     position: relative;
     margin-right: 16px;
     font-size: 14px;
@@ -2823,6 +2824,7 @@ body .button-hover:hover::before {
     display: none;
   }
   #menu-outer #menu-inner .menu-item {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     position: relative;
     margin-right: 16px;
     font-size: 14px;
@@ -10220,11 +10222,18 @@ li {
   padding: 0;
   border: 0;
 }
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 a.post-title,
+.title,
 p,
 h2,
-li {
-  font-family: Sans-serif;
+li,
+h3,
+h4,
+h5,
+h6,
+h1 {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 2;
 }
 p,
