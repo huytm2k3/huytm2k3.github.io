@@ -4,7 +4,10 @@
         each url, label in theme.menu
             - var name = label.toLocaleLowerCase();
             a(class="menu-item" href=url)= __('menu.' + name)
+    script(src=url_for('/js/audio_autoplay.js'))
     div(class="right-info")
+        audio(controls='', autoplay='', id='bg-music', style='display: none')
+            source(src='/audio/bgmusic.mp3', type='audio/mpeg')
         if theme.algolia_search.enable
             a(class="search social-icon")
                 i.fas.fa-search
