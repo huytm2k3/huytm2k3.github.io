@@ -106,3 +106,25 @@ Start 1 ubuntu với command line:
 ```bash
 docker start -ai <container_id>
 ```
+
+## Phân biệt Image và Container?
+
+Dễ hiểu thì Image giống với github repo, đã được đóng gói với nhiều config, nhiều depd, service và có thể lưu trữ vận chuyển và sử dụng ở nhiều nơi
+
+Container là Image đã được chạy local ở máy.
+
+## Basic command
+
+```bash
+docker pull <image_name>
+docker start <image_id>
+docker images # List all image
+docker ps # List all running images
+docker stop <image_id> 
+docker ps -a # List all running and stopped images
+docker run --name <new_name> <image_name> # Running image without default name
+docker exec -it <image_id> # Open container's terminal
+docker network create <network_image_name>
+```
+
+
