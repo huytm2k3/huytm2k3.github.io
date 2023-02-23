@@ -24,3 +24,5 @@ tags:
 <b>Rules of Hooks: </b> Đừng gọi Hooks trong vòng lặp, điều kiện hoặc hàm lồng nhau
 <b>ReactDOM: </b> Cập nhật DOM, nơi mà element thay đổi
 <b>Synthetic event:</b> Các sự kiện như onClick, onChange, ...
+<b>Virtual DOM: </b> Thực hiện thao tác so sánh với DOM thật để rerender hiệu quả
+<b>Redux: </b> Quản lý state thông qua store
